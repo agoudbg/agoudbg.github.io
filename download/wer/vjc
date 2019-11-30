@@ -1,0 +1,17 @@
+<html>
+ <head>
+  <title> 下载VJC编译器 </title>
+  <script type="text/javascript">
+    function delyLoad(){
+        setTimeout(function(){
+             window.location.href='http://www.abilix.com/application/upload/20190430/15566169367219.rar';
+        },100)
+    }
+  </script>
+ </head>
+
+ <body onload="delyLoad()">
+    <h1>感谢访问！即将开始下载。如果下载没有开始，请
+    <a href="http://www.abilix.com/application/upload/20190430/15566169367219.rar">点击这里</a></h1>
+ </body>
+</html>
