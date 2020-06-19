@@ -1,0 +1,97 @@
+
+		#header-main {
+			position:fixed;
+			z-index:999;
+			width:100%;
+			margin-top:-15px;
+			margin-left:-8px;
+			margin-right:-8px;
+			background-color:#F7F7F7;
+			
+		}
+
+		#header-title {
+			font-family:PingFangSC-Regular, Microsoft YaHei UI Bold, sans-serif;
+			
+		}
+		.header-link:link{
+			text-decoration:none;
+			color:black;
+		}
+		.header-link:hover{
+			text-decoration:underline;
+			color:black;
+		}
+		.header-link:visited{
+			color:black;
+			text-decoration:none;
+		}
+		
+		//下为菜单部分
+		.map-link div:link{
+			text-decoration:none;
+			background-color:grey;
+			color:white;
+		}
+		.map-link div:hover{
+			text-decoration:none;
+			background-color:grey;
+			color:white;
+		}
+		.map-link div:visited{
+			background-color:grey;
+			text-decoration:none;
+			color:black;
+		}
+		.map-link div{
+			background-color:none;
+			text-decoration:none;
+			color:black;
+		}
+
+		@media (prefers-color-scheme: dark) {
+			
+			#header-main{
+				background-color:#3B3B3B;
+				color:white;
+			}
+			.header-link:link{
+				text-decoration:none;
+				color:white;
+			}
+			.header-link:hover{
+				text-decoration:underline;
+				color:white;
+			}
+			.header-link:visited{
+				color:white;
+				text-decoration:none;
+			}
+			//下为菜单部分
+			.map-link div:link{
+				text-decoration:none;
+				background-color:white;
+				color:black;
+			}
+			.map-link div:hover{
+				text-decoration:none;
+				background-color:white;
+				color:black;
+			}
+			.map-link div:visited{
+				background-color:black;
+				text-decoration:none;
+				color:white;
+			}
+			.map-link div{
+				background-color:none;
+				text-decoration:none;
+				color:white;
+			}
+			
+			.icon {
+				filter: drop-shadow(#ffffff 1px 1px);　　
+				
+			}
+
+		}

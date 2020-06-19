@@ -1,0 +1,12 @@
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('1.2("<S u=\\\'r-8\\\' />");1.2("<e>");1.2(".6-4 {");1.2("i-d:f;");1.2("}");1.2(".6-3{");1.2("y-z:A;");1.2("}");1.2("</e>");1.2("<p e=\\\'i-d:f;\\\'>");1.2("<a c=\\\'/\\\' b=\\\'9\\\'><w x=\\\'m://E.F.D/B/C.v  \\\' o=\\\'g\\\' h=\\\'q\\\'  n=\\\'g\\\' d=\\\'\\\' /></a></3>");1.2("</p>");1.2("<j e=\\\'h:s%;\\\' t=\\\'5\\\' V=\\\'T\\\' d=\\\'f\\\' R=\\\'0\\\' 7=\\\'Z-Y\\\' W=\\\'#X\\\'>");1.2("	<k>");1.2("		<l>");1.2("			<4 7=\\\'6-4\\\'>");1.2("				<3 7=\\\'6-3\\\'><a c=\\\'/\\\' b=\\\'9\\\'>Q</a></3> ");1.2("			</4>");1.2("			<4 7=\\\'6-4\\\'>");1.2("				<3 7=\\\'6-3\\\'><a c=\\\'/J/\\\' b=\\\'9\\\'>U</a></3> ");1.2("			</4>");1.2("			<4 7=\\\'6-4\\\'>");1.2("				<3 7=\\\'6-3\\\'><a c=\\\'/K/\\\' b=\\\'9\\\'>I</a></3> ");1.2("			</4>");1.2("			<4 7=\\\'6-4\\\'>");1.2("				<3 7=\\\'6-3\\\'><a c=\\\'/G/\\\' b=\\\'9\\\'>H</a></3> ");1.2("			</4>");1.2("			<4 7=\\\'6-4\\\'>");1.2("				<3 7=\\\'6-3\\\'><a c=\\\'/O/\\\' b=\\\'9\\\'>P</a></3> ");1.2("			</4>");1.2("			<4 7=\\\'6-4\\\'>");1.2("				<3 7=\\\'6-3\\\'><a c=\\\'m://N.L/\\\' b=\\\'9\\\'>M</a></3> ");1.2("			</4>");1.2("		</l>");1.2("	</k>");1.2("</j>");1.2("");1.2("");',62,62,'|document|writeln|span|td||header|class||_0||target|href|align|style|center|229资料站|width|text|table|tbody|tr|https|title|alt||333|utf|100|cellpadding|charset|png|img|src|font|size|20px|kf|H539eb49db8a1414da8cd2820095bf703l|com|ae01|alicdn|video|视频|应用|live|resources|wang|博客|junbo|about|关于|首页|border|meta|10|直播|cellspacing|bordercolor|FFFFFF|zeroborder|ke'.split('|'),0,{}))
+document.writeln("");
+document.writeln("");
+document.writeln("<div class=\'dark-tip\'>");
+document.writeln("<p>在深色模式查看我们的网站。体验如何？可以向我们<a href=\'/feedback/\'>反馈问题</a>。</p>");
+document.writeln("</div>");
+document.writeln("");
+document.writeln("");
+document.writeln("<div class=\'light-tip\'>");
+document.writeln("<p>229资料站现已推出深色模式！请将浏览器设置为深色。</p>");
+document.writeln("</div>");
+document.writeln("");

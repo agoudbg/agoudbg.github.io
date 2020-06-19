@@ -1,0 +1,29 @@
+		.height {
+			height:70px;
+		}
+		#header-main p,#header-main h1 {
+			display: inline-block;
+		}
+		#header-title{
+			margin-left:25px;
+		}
+		.header-map{
+			float:left;
+			font-size:20px;
+			margin:5px;
+			padding:15px 20px 16px 20px;
+			background-color:none;
+		}
+		#map-box{
+			float: right;
+			margin:10px;
+			width:450px;
+			
+		}
+		#mobile-menu {
+			display:none;
+		}
+		#clicker {
+			position:fixed;
+
+		}

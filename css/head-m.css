@@ -1,0 +1,52 @@
+
+		.height {
+			height:58px;
+		}
+
+		#header-main p,#header-main h1 {
+			
+		}
+		#header-title{
+			text-align:center;
+			font-size:24px;
+		}
+		#mobile-menu {
+			position:fixed;
+			z-index:999;
+			left:0px;
+			top:-3px;
+			padding:10px 47px 0px 10px;
+			
+		}
+		.header-map{
+			float:none;
+			font-size:20px;
+			margin:0px -12px;
+			width:100%;
+			padding:15px 20px 16px 60px;
+			background-color:none;
+			
+		}
+		#cover{
+			width:200%;
+			height:200%;
+			margin:-60px;
+			position:fixed;
+			z-index:0;
+			background-color:grey;	
+			opacity:0.5;
+			visibility:hidden;
+		}
+		
+
+		#map-box {
+			background-color:#F7F7F7;
+			margin-top: -5px;
+			visibility:hidden;
+		}
+		@media (prefers-color-scheme: dark) {
+			#map-box {
+				background-color:#3B3B3B;
+			}
+		}
+		
