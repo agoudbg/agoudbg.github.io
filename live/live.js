@@ -60,8 +60,15 @@ function getdetail(id){
 }
 
 function search(words){
-	if (words=='more')
+	
+	if (words=='more'){
 		words=whatsea;
+		if (showmore.innerHTML=="已加载完成"){
+		alert('哎呀 人家都说加载完了还要戳我 讨厌鬼(＞人＜)');
+		showmore.innerHTML="(´･_･`)";
+		return -1;
+		}
+	}
 	else{
 	whatsea=words;showmore.innerHTML="加载更多";}
 	singlecount=0;
@@ -79,7 +86,7 @@ function search(words){
 		else continue;
 		if (single=="stopsearch"){
 			showmore.innerHTML="已加载完成";
-			break;
+			return 0;
 		}
 		var a=new RegExp(words+"\/i");
 		if (single.indexOf(words)==-1)continue;
@@ -91,8 +98,7 @@ function search(words){
 
 	}
 		if (singlecount==0){
-		showmore.innerHTML="已加载完成";
-		
+		search('more');
 		}
 
 	//preview_main.innerHTML="<h2>your str";
