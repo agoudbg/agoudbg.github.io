@@ -51,6 +51,12 @@ function changetab(c){
 	else search(","+c+",");
 }
 
+function getdetail(id){
+	var a=new RegExp("{"+id+",(\\S*)}","");
+	single=channels.match(a);//[1];
+	return single;
+}
+
 function search(words){
 	id=0;
 	count=0;
@@ -58,12 +64,9 @@ function search(words){
 	for(id=1;;id++)
 	{
 		things="";
-		var whattosearch=new RegExp("{"+id+",(\S*)}")
-		//whattosearch = new RegExp(whattosearch,"id")
-		var a=new RegExp("{"+id+",(\\S*)}","");
-		single=channels.match(a);//[1];
+		single=getdetail(id);
 		if (single!=null)
-			single=channels.match(a)[1];
+			single=single[1];
 		else continue;
 		if (single=="stopsearch")
 			break;
@@ -82,8 +85,25 @@ function search(words){
 
 function find(id) {
 	open=1;
-	var id,name,photo,scrnum,introduce;
-	
+	//var id,name,photo,scrnum,introduce;
+	details=getdetail(id);
+	things=details[1].split(",");
+	dheader_title.innerHTML=things[0];
+	detail_img.src=things[1];
+	detail_title.innerHTML=things[0];
+	detail_int.innerHTML=things[3];
+	detail_tag.innerHTML=things[4];
+	detail_id.innerHTML='id:'+id;
+	detail_baike.href='https://www.baidu.com/s?wd='+things[0];
+	countnum.innerHTML='（共'+things[2]+'个）';
+	linksin.innerHTML="";
+	for(i=1;i<=things[2];i++){
+		
+		linkname=things[2*i+3];
+		linkurl=things[2*i+4];
+		alllink='<div class="singlelink"><p class="introduce linklist">'+linkname+'</p><button class="play" onclick=play("1")><svg t="1595687531264" class="playicon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2074" width="12" height="12"><path d="M870.05628 437.593243L260.040791 19.178254l-0.284443 0.227554a70.59864 70.59864 0 0 0-119.06765 50.289443c0 21.105637-0.910216 62.634249 0 61.724033v774.935278c0 38.399744 31.459346 69.688424 70.371086 69.688424 18.943874 0 36.181092-7.395506 48.810341-19.512758L869.942503 538.172128c13.255023-12.686138 21.617634-30.492241 21.617633-50.232554v-0.227554c0-19.683424-8.248834-37.546416-21.503856-50.175666z" fill="#2c2c2c" p-id="2075"></path></svg></button><pre class="url">'+linkurl+'</pre></div>';
+		linksin.innerHTML+=alllink;
+	}
 	
 	history.replaceState("","","?id="+id)
 	changewidth();

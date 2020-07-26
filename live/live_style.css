@@ -45,13 +45,27 @@
 
     display: none;
 }
+/* ::-webkit-scrollbar { */
+    /* width: 20px; */
+    /* height: 8px; */
+/* } */
+
+/* ::-webkit-scrollbar-thumb { */
+    /* border-radius: 12px; */
+    /* border: 6px solid rgba(0, 0, 0, 0); */
+    /* box-shadow: 8px 0 0 #A5ADB7 inset; */
+/* } */
+
+/* ::-webkit-scrollbar-thumb:hover { */
+    /* box-shadow: 8px 0 0 #4A4A4A inset; */
+/* } */
 
 .preview_type{
 	
 	background-color: #F7F7F7;
 	padding: 10px 10px 10px 10px;
-	margin-right:-10px;
-	margin-left:-10px;
+	margin-right:0px;
+	margin-left:0px;
 	margin:0px;
 	cursor: pointer;
 
