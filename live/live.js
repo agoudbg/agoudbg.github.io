@@ -46,7 +46,7 @@ function changetab(c){
 	type.style.setProperty('background-color','grey');
 	type.style.setProperty('color','white');
 	type.style.setProperty('font-weight','bold');
-	preview_main.innerHTML='';
+	
 	if (c=='alltype')search('');
 	else search(","+c+",");
 }
@@ -54,7 +54,7 @@ function changetab(c){
 function search(words){
 	id=0;
 	count=0;
-	//preview_main.innerHTML="";
+	preview_main.innerHTML="";
 	for(id=1;;id++)
 	{
 		things="";
@@ -67,6 +67,7 @@ function search(words){
 		else continue;
 		if (single=="stopsearch")
 			break;
+		var a=new RegExp(words+"\/i");
 		if (single.indexOf(words)==-1)continue;
 		count++;
 		//alert(single);
