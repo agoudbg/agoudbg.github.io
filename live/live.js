@@ -30,7 +30,7 @@ function changetab(c){
 	
 	type=document.getElementsByClassName("preview_type");
 	a=0;
-	while (a<3){
+	while (a<4){
 		if(window.matchMedia('(prefers-color-scheme: dark)').matches){
 			type[a].style.setProperty('background-color','#3B3B3B');
 			type[a].style.setProperty('color','white');
