@@ -134,7 +134,7 @@ function closeplayer() {
 function copylink()
 {
  document.execCommand(location.href); 
-alert("已复制页面链接到剪切板。");
+alert("啊哦，功能还在开发中~\n先直接复制这个网址吧！");
 }
 
 

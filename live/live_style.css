@@ -250,7 +250,7 @@
 	white-space:nowrap;
 	text-overflow: ellipsis;
 	float:left;
-	width:16%;
+	width:19%;
 	height:22px;
 }
 .url{
@@ -258,15 +258,15 @@
 	border-radius:2px;
 	background-color:#E1E1E1;
 	font-size:16px;
-	padding:2px 5px 2px 5px;
+	//padding:2px 5px 2px 5px;
 	display:inline;
 	color:black;
 	overflow: auto;
 	width: 71%;
 	white-space:nowrap;
 	left:1px;
-	margin:-2px 2px;
-	margin-right:17px;
+	margin:2px;
+	margin-right:10px;
 	//font-family:;
 	//font-weight:bold;
 	
@@ -288,6 +288,7 @@
 	padding:0;
 	float:right;
 	cursor: pointer;
+	display:none;
 }
 .playicon{
 	
@@ -346,7 +347,7 @@
 .white{
 	position:relative;
 	top:0px;
-	height:200px;
+	height:2000px;
 }
 @media (prefers-color-scheme: dark) {
 	
