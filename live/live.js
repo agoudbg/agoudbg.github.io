@@ -1,22 +1,23 @@
 var open=0;
-var channels;
-//设置读取内容
-$.ajax({
-	type:'get',
-	url:"links.html",//这里是baiurl
-	success:function(channels,heads,status){
-	 alert(channels);
-	}
-});
-a=channels.match(/{.}/)[1];
-var str = "aaabbbcccdddeeefff";
-str = str.match(/aaa(\S*)fff/)[1];
-alert(str);//结果bbbcccdddeee
-alert(a); 
+var single;
+
+
 type=document.getElementById("alltype");
 type.style.setProperty('background-color','grey');
 type.style.setProperty('color','white');
 type.style.setProperty('font-weight','bold');
+//设置读取内容
+function loadc(name) {
+    let xhr = new XMLHttpRequest(),
+        okStatus = document.location.protocol === "file:" ? 0 : 200;
+    xhr.open('GET', name, false);
+    xhr.overrideMimeType("text/html;charset=utf-8");//默认为utf-8
+    xhr.send(null);
+    return xhr.status === okStatus ? xhr.responseText : null;
+}
+let channels=loadc("link.html")
+
+search("");
 
 var goto=Request("id");
 if (goto!="")find(goto);
@@ -45,13 +46,39 @@ function changetab(c){
 	type.style.setProperty('background-color','grey');
 	type.style.setProperty('color','white');
 	type.style.setProperty('font-weight','bold');
-	if (c=="alltype") search("no");
+	preview_main.innerHTML='';
+	if (c=='alltype')search('');
 	else search(","+c+",");
 }
+
 function search(words){
+	id=0;
+	count=0;
+	//preview_main.innerHTML="";
+	for(id=1;;id++)
+	{
+		things="";
+		var whattosearch=new RegExp("{"+id+",(\S*)}")
+		//whattosearch = new RegExp(whattosearch,"id")
+		var a=new RegExp("{"+id+",(\\S*)}","");
+		single=channels.match(a);//[1];
+		if (single!=null)
+			single=channels.match(a)[1];
+		else continue;
+		if (single=="stopsearch")
+			break;
+		if (single.indexOf(words)==-1)continue;
+		count++;
+		//alert(single);
+		things=single.split(",");
+		preview_main.innerHTML+='<div class="preview_box" onclick="find('+id+')"><img src="'+things[1]+'" class="preview_img"><p class="preview_title">'+things[0]+'</p><p class="preview_little">'+things[2]+'个直播源</p><svg t="1595514904008" class="preview_go" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2122" width="200" height="200"><path d="M730.802325 593.75489 804.269733 525.91913 273.742891 0.511968 219.730267 54.012624 694.580589 524.191238 220.562215 969.987376 274.382851 1023.36004 730.994313 593.946878Z" p-id="2123" fill="#bfbfbf"></path></svg></div>';
+
+	}
 	
 	//preview_main.innerHTML="<h2>your str";
 }
+
+
 function find(id) {
 	open=1;
 	var id,name,photo,scrnum,introduce;
@@ -103,6 +130,14 @@ function closeplayer() {
 	player.style.setProperty("display","none");
 
 }
+
+function copylink()
+{
+ document.execCommand(location.href); 
+alert("已复制页面链接到剪切板。");
+}
+
+
 //Make the DIV element draggagle:
 dragElement(document.getElementById(("player")));
 

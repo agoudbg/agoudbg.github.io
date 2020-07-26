@@ -250,7 +250,7 @@
 	white-space:nowrap;
 	text-overflow: ellipsis;
 	float:left;
-	width:13%;
+	width:16%;
 	height:22px;
 }
 .url{
@@ -262,14 +262,15 @@
 	display:inline;
 	color:black;
 	overflow: auto;
-	width: 65%;
+	width: 71%;
 	white-space:nowrap;
 	left:1px;
 	margin:-2px 2px;
+	margin-right:17px;
 	//font-family:;
 	//font-weight:bold;
 	
-	float:left;
+	float:right;
 }
 .play{
 	
