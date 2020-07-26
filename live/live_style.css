@@ -131,6 +131,15 @@
 
 }
 
+#showmore{
+	color:black;
+	margin:30px;
+	padding:5px 10px;
+	text-align:center;
+	background-color:#E8E8E8;
+	//position:relative;
+}
+
 #detail{
 	
 	position:absolute;
@@ -395,7 +404,14 @@
 		
 		border-bottom:solid grey 1px;
 				
-		}
+	}
+
+
+	#showmore{
+		color:white;
+		background-color:#3B3B3B;
+			}
+
 
 	#detail {
 		background-color: #262626;

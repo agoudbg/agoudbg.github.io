@@ -1,6 +1,7 @@
 var open=0;
 var single;
-
+searched=0;
+whatsea="";
 
 type=document.getElementById("alltype");
 type.style.setProperty('background-color','grey');
@@ -46,9 +47,10 @@ function changetab(c){
 	type.style.setProperty('background-color','grey');
 	type.style.setProperty('color','white');
 	type.style.setProperty('font-weight','bold');
-	
+	searched=0;
 	if (c=='alltype')search('');
 	else search(","+c+",");
+	
 }
 
 function getdetail(id){
@@ -58,27 +60,41 @@ function getdetail(id){
 }
 
 function search(words){
-	id=0;
-	count=0;
-	preview_main.innerHTML="";
-	for(id=1;;id++)
+	if (words=='more')
+		words=whatsea;
+	else{
+	whatsea=words;showmore.innerHTML="加载更多";}
+	singlecount=0;
+	if (searched==0){
+		preview_main.innerHTML="";
+		id=0;
+	}
+	searched+=50;
+	for(id;id<=searched;id++)
 	{
 		things="";
 		single=getdetail(id);
 		if (single!=null)
 			single=single[1];
 		else continue;
-		if (single=="stopsearch")
+		if (single=="stopsearch"){
+			showmore.innerHTML="已加载完成";
 			break;
+		}
 		var a=new RegExp(words+"\/i");
 		if (single.indexOf(words)==-1)continue;
-		count++;
+		singlecount++;
+
 		//alert(single);
 		things=single.split(",");
 		preview_main.innerHTML+='<div class="preview_box" onclick="find('+id+')"><img src="'+things[1]+'" class="preview_img"><p class="preview_title">'+things[0]+'</p><p class="preview_little">'+things[2]+'个直播源</p><svg t="1595514904008" class="preview_go" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2122" width="200" height="200"><path d="M730.802325 593.75489 804.269733 525.91913 273.742891 0.511968 219.730267 54.012624 694.580589 524.191238 220.562215 969.987376 274.382851 1023.36004 730.994313 593.946878Z" p-id="2123" fill="#bfbfbf"></path></svg></div>';
 
 	}
-	
+		if (singlecount==0){
+		showmore.innerHTML="已加载完成";
+		
+		}
+
 	//preview_main.innerHTML="<h2>your str";
 }
 
