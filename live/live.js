@@ -23,8 +23,8 @@ search("");
 var goto=Request("id");
 if (goto!="")find(goto);
 
-var type=Request("type");
-if (type!="")changetab(type);
+// var type=Request("type");
+// if (type!="")changetab(type);
 window.onresize = 
 function cw(){
 	changewidth();
@@ -52,7 +52,7 @@ function changetab(c){
 	searched=0;
 	if (c=='alltype')search('');
 	else search(","+c+",");
-	history.replaceState("","","?type="+c)
+	// history.replaceState("","","?type="+c)
 }
 
 function getdetail(id){
