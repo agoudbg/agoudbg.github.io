@@ -12,8 +12,9 @@
 		<!-- 样式 -->
 		<link rel="stylesheet" type="text/css" href="/css/common.css">
 		<link rel="stylesheet" type="text/css" href="live_style.css">
-		<script src="/header.js"></script> 
+		
 		<!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  -->
+		<!-- <script src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script> -->
 		<style media="screen and (min-width:5px) and (max-width:630px)">
 			#detail{
 				width:100%;
@@ -56,7 +57,14 @@
 				//overflow-y: auto;
 				//overflow-x: hidden;
 			}
-
+			.livehead{
+				
+				width:40%;
+				margin-left:0px;
+				//height:500px;
+				//overflow-y: auto;
+				//overflow-x: hidden;
+			}
 			#detail{
 				width:57%;
 				right:0px;
@@ -107,9 +115,13 @@
 	<body>
 
 		<!-- 下面是正文 -->
+		
+		<div class="livehead">
+			<script src="/header.js"></script> 
+		</div>
 		<div id="preview">
 		<h1 style="text-align:center;">直播中心<small>Beta</small></h1>
-		
+		<small>本站直播资源均来自互联网，本站仅对相关资源进行搜集整理。所有资源仅供学习交流使用。<br /><br /></small>
 			<input id="searchbox" placeholder="搜索……" onporpertychanger="" oninput="changetab('alltype');searched=0;search(searchbox.value);"></input>
 			<div id="preview_types">
 				<br />
@@ -151,19 +163,16 @@
 						<img src="https://himg.bdimg.com/sys/portrait/item/6590737765657479737761696e6603.jpg" class="preview_img" id="detail_img">
 					</td><td style="vertical-align:top;">
 						<p class="preview_title" id="detail_title">---</p>
-						<p class="tag" id="detail_tag">---</p>
-						<p class="tag" id="detail_id">id:---</p>
+						<div class="tags" id="detail_tag">
+			
+						</div>
 					</td></tr></tbody></table>
 					<p class="introduce" id="detail_int">---</p>
 					
 					<a id="detail_baike" href="" target="_blank"><p class="introduce right">百度搜索该频道&gt;</p></a>
 					<p class="introduce dh2">直播源<small id="countnum"></small></p>
 					<div id="linksin">
-						<div class="singlelink">
-							<p class="introduce linklist">---</p>
-							<button class="play" onclick=play('1')><svg t="1595687531264" class="playicon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2074" width="12" height="12"><path d="M870.05628 437.593243L260.040791 19.178254l-0.284443 0.227554a70.59864 70.59864 0 0 0-119.06765 50.289443c0 21.105637-0.910216 62.634249 0 61.724033v774.935278c0 38.399744 31.459346 69.688424 70.371086 69.688424 18.943874 0 36.181092-7.395506 48.810341-19.512758L869.942503 538.172128c13.255023-12.686138 21.617634-30.492241 21.617633-50.232554v-0.227554c0-19.683424-8.248834-37.546416-21.503856-50.175666z" fill="#2c2c2c" p-id="2075"></path></svg></button>
-							<pre class="url">---</pre>
-						</div>
+					
 					</div>
 			
 

@@ -22,7 +22,9 @@ search("");
 
 var goto=Request("id");
 if (goto!="")find(goto);
-	
+
+var type=Request("type");
+if (type!="")changetab(type);
 window.onresize = 
 function cw(){
 	changewidth();
@@ -50,7 +52,7 @@ function changetab(c){
 	searched=0;
 	if (c=='alltype')search('');
 	else search(","+c+",");
-	
+	history.replaceState("","","?type="+c)
 }
 
 function getdetail(id){
@@ -76,7 +78,7 @@ function search(words){
 		preview_main.innerHTML="";
 		id=0;
 	}
-	searched+=50;
+	searched+=250;
 	for(id;id<=searched;id++)
 	{
 		things="";
@@ -114,16 +116,23 @@ function find(id) {
 	detail_img.src=things[1];
 	detail_title.innerHTML=things[0];
 	detail_int.innerHTML=things[3];
-	detail_tag.innerHTML=things[4];
-	detail_id.innerHTML='id:'+id;
+	detail_tag.innerHTML="";
+	for(i=1;i<=things[4];i++){
+		
+		tag=things[i+4];
+		tagplus='<p class="tag" >'+tag+'</p>';
+		detail_tag.innerHTML+=tagplus;
+	}
+	detail_tag.innerHTML+='<p class="tag" >id: '+id+'</p>';
+	
 	detail_baike.href='https://www.baidu.com/s?wd='+things[0];
 	countnum.innerHTML='（共'+things[2]+'个）';
 	linksin.innerHTML="";
 	for(i=1;i<=things[2];i++){
 		
-		linkname=things[2*i+3];
-		linkurl=things[2*i+4];
-		alllink='<div class="singlelink"><p class="introduce linklist">'+linkname+'</p><button class="play" onclick=play("1")><svg t="1595687531264" class="playicon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2074" width="12" height="12"><path d="M870.05628 437.593243L260.040791 19.178254l-0.284443 0.227554a70.59864 70.59864 0 0 0-119.06765 50.289443c0 21.105637-0.910216 62.634249 0 61.724033v774.935278c0 38.399744 31.459346 69.688424 70.371086 69.688424 18.943874 0 36.181092-7.395506 48.810341-19.512758L869.942503 538.172128c13.255023-12.686138 21.617634-30.492241 21.617633-50.232554v-0.227554c0-19.683424-8.248834-37.546416-21.503856-50.175666z" fill="#2c2c2c" p-id="2075"></path></svg></button><pre class="url">'+linkurl+'</pre></div>';
+		linkname=things[2*i+8];
+		linkurl=things[2*i+9];
+		alllink='<div class="singlelink"><p class="introduce linklist">'+linkname+'</p><button class="play" onclick=play("1")><svg t="1595687531264" class="playicon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2074" width="12" height="12"><path d="M870.05628 437.593243L260.040791 19.178254l-0.284443 0.227554a70.59864 70.59864 0 0 0-119.06765 50.289443c0 21.105637-0.910216 62.634249 0 61.724033v774.935278c0 38.399744 31.459346 69.688424 70.371086 69.688424 18.943874 0 36.181092-7.395506 48.810341-19.512758L869.942503 538.172128c13.255023-12.686138 21.617634-30.492241 21.617633-50.232554v-0.227554c0-19.683424-8.248834-37.546416-21.503856-50.175666z" fill="#2c2c2c" p-id="2075"></path></svg></button><pre class="url" id="'+linkurl+'" onclick="copyLink(this);"data-clipboard-action="copy" data-clipboard-target="#linkurl">'+linkurl+'</pre></div>';
 		linksin.innerHTML+=alllink;
 	}
 	
@@ -235,3 +244,7 @@ function Request(strName){
 	}
 	return "";
 }
+ function copyLink(a){
+
+}
+	

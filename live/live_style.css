@@ -1,7 +1,4 @@
-#preview{
-	
-	
-}
+
 
 #searchbox{
 	
@@ -220,18 +217,10 @@
 	
 	height:52px;
 }
-
-.tag{
+#detail_img{
 	
-	margin-top:40px;
-	margin-left:12px;
-	margin-right:-12px;
-	border-radius:2px;
-	background-color:#E1E1E1;
-	font-size:14px;
-	padding:2px 5px;
-	display:inline-block;
-	color:black;
+	margin-bottom:12px;
+	
 }
 
 .introduce{
@@ -241,6 +230,35 @@
 	position:relative;
 	top:2px;
 
+	
+}
+.tags{
+	
+	position:relative;
+	margin-right:10px;
+	top:40px;
+	height:100px;
+
+	
+}
+.tag{
+	
+	margin-top:6px;
+	margin-bottom:0px;
+	margin-left:11px;
+	margin-right:-5px;
+	border-radius:2px;
+	background-color:#E1E1E1;
+	font-size:14px;
+	padding:2px 5px;
+	display:inline-block;
+	color:black;
+}
+
+
+.tags{
+	
+	display:inline-block;
 	
 }
 .right{
@@ -273,7 +291,7 @@
 	white-space:nowrap;
 	text-overflow: ellipsis;
 	float:left;
-	width:19%;
+	width:11%;
 	height:22px;
 }
 .url{
@@ -281,11 +299,11 @@
 	border-radius:2px;
 	background-color:#E1E1E1;
 	font-size:16px;
-	//padding:2px 5px 2px 5px;
+	padding:2px 5px 2px 5px;
 	display:inline;
 	color:black;
 	overflow: auto;
-	width: 71%;
+	width: 62%;
 	white-space:nowrap;
 	left:1px;
 	margin:2px;
@@ -301,17 +319,17 @@
 	border-width:0px;
 	background-color:#E1E1E1;
 	font-size:14px;
-	//padding:2px 5px;
+	//padding:4px 5px;
 	display:inline;
 	color:black;	
-	width: 21px;
-	height: 21px;
-	margin-right:20px;
-	margin-top:-2px;
+	width: 24px;
+	height: 24px;
+	margin-right:13px;
+	margin-top:2px;
 	padding:0;
 	float:right;
 	cursor: pointer;
-	display:none;
+	//display:none;
 }
 .playicon{
 	
@@ -320,7 +338,7 @@
 }
 
 #player {
-	position: absolute;
+	position: fixed;
 	top: 70px;
 	left: 16px;
 	width: 300px;
