@@ -274,3 +274,15 @@ $(function(){
      
     });
 });
+
+function openl(){
+
+	type=document.getElementsByClassName("listtype");
+	type[0].style.setProperty('display','none');
+	type[1].style.setProperty('display','none');
+	preview_types.style.setProperty('white-space','normal');
+	preview_types.style.setProperty('overflow','visible');
+	preview_types.style.setProperty('height','auto');
+	
+	
+}
