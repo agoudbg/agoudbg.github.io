@@ -33,7 +33,7 @@ function changetab(c){
 	
 	type=document.getElementsByClassName("preview_type");
 	a=0;
-	while (a<4){
+	while (a<9){
 		if(window.matchMedia('(prefers-color-scheme: dark)').matches){
 			type[a].style.setProperty('background-color','#3B3B3B');
 			type[a].style.setProperty('color','white');
@@ -45,10 +45,13 @@ function changetab(c){
 		
 		a++;
 	}
+	
 	type=document.getElementById(c);
-	type.style.setProperty('background-color','grey');
-	type.style.setProperty('color','white');
-	type.style.setProperty('font-weight','bold');
+	if (preview_types.innerHTML.match(c)!=null) {
+		type.style.setProperty('background-color','grey');
+		type.style.setProperty('color','white');
+		type.style.setProperty('font-weight','bold');
+	}
 	searched=0;
 	if (c=='alltype')search('');
 	else search(","+c+",");
@@ -72,7 +75,9 @@ function search(words){
 		}
 	}
 	else{
-	whatsea=words;showmore.innerHTML="加载更多";}
+		whatsea=words;
+		showmore.innerHTML="加载更多";
+	}
 	singlecount=0;
 	if (searched==0){
 		preview_main.innerHTML="";
@@ -120,7 +125,7 @@ function find(id) {
 	for(i=1;i<=things[4];i++){
 		
 		tag=things[i+4];
-		tagplus='<p class="tag" >'+tag+'</p>';
+		tagplus='<p class="tag" onclick="closewin();changetab(&quot;'+tag+'&quot;);">'+tag+'</p>';
 		detail_tag.innerHTML+=tagplus;
 	}
 	detail_tag.innerHTML+='<p class="tag" >id: '+id+'</p>';
@@ -143,8 +148,10 @@ function closewin() {
 	detail.style.setProperty('left','100%');
 	dheader_sharesvg.style.cssText="display:none;";
 	open=0;
-	history.replaceState("","","?id=")
 	changewidth();
+
+	history.replaceState("","","?id=")
+	
 } 
 function changewidth(){
 	if (open==1){
@@ -248,3 +255,22 @@ function Request(strName){
 
 }
 	
+$(function(){
+    //滚动超过一屏幕应该显示，否则消失
+    var pagelookheight = document.documentElement.clientHeight;
+    var topTimer = null;
+    $(function () {
+        $(window).scroll(function(){
+            if ($(window).scrollTop()>pagelookheight){
+                $("#backToTop").fadeIn(500);
+                //$("#backToTop").style.display = "block";
+            }
+            else
+            {
+                $("#backToTop").fadeOut(500);
+
+            }
+        });
+     
+    });
+});
