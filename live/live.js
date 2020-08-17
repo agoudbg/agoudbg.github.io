@@ -142,13 +142,8 @@ function find(id) {
 		linksin.innerHTML+=alllink;
 	}
 	
-	history.replaceState("","","?id="+id)
-	if (window.location.href.charAt('4')!='s') {
-			
-			pinglun.innerHTML+="<small>在http模式下暂不能添加评论。</small>"
-			
-		}
-	loadcom();
+	history.replaceState("","","?id="+id+"&code="+comment)
+
 	changewidth();
 }
 function closewin() {
@@ -366,7 +361,12 @@ function loadcom(plid,pls){
 	gitalk.render('gitalk-container')
 }
 
-
+if (window.location.href.charAt('4')!='s') {
+		
+		pinglun.innerHTML+="<small>在http模式下暂不能添加评论。</small>"
+		
+	}
+loadcom();
 //loadcom();
 function getUrlArgStr(){  
     var q=location.search.substr(1);  
