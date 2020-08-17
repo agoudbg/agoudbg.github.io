@@ -3,7 +3,6 @@ var single;
 searched=0;
 whatsea="";
 playernum=0;
-
 type=document.getElementById("alltype");
 type.style.setProperty('background-color','grey');
 type.style.setProperty('color','white');
@@ -139,7 +138,7 @@ function find(id) {
 		
 		linkname=things[2*i+8];
 		linkurl=things[2*i+9];
-		alllink='<div class="singlelink"><p class="introduce linklist">'+linkname+'</p><button class="play" onclick=play("'+linkurl+'")><svg t="1595687531264" class="playicon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2074" width="12" height="12"><path d="M870.05628 437.593243L260.040791 19.178254l-0.284443 0.227554a70.59864 70.59864 0 0 0-119.06765 50.289443c0 21.105637-0.910216 62.634249 0 61.724033v774.935278c0 38.399744 31.459346 69.688424 70.371086 69.688424 18.943874 0 36.181092-7.395506 48.810341-19.512758L869.942503 538.172128c13.255023-12.686138 21.617634-30.492241 21.617633-50.232554v-0.227554c0-19.683424-8.248834-37.546416-21.503856-50.175666z" fill="#2c2c2c" p-id="2075"></path></svg></button><pre class="url" id="'+linkurl+'" onclick="copyLink(this);"data-clipboard-action="copy" data-clipboard-target="#linkurl">'+linkurl+'</pre></div>';
+		alllink='<div class="singlelink"><p class="introduce linklist">'+linkname+'</p><button class="play" onclick=play("'+linkurl+'")><svg t="1595687531264" class="playicon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2074" width="12" height="12"><path d="M870.05628 437.593243L260.040791 19.178254l-0.284443 0.227554a70.59864 70.59864 0 0 0-119.06765 50.289443c0 21.105637-0.910216 62.634249 0 61.724033v774.935278c0 38.399744 31.459346 69.688424 70.371086 69.688424 18.943874 0 36.181092-7.395506 48.810341-19.512758L869.942503 538.172128c13.255023-12.686138 21.617634-30.492241 21.617633-50.232554v-0.227554c0-19.683424-8.248834-37.546416-21.503856-50.175666z" fill="#2c2c2c" p-id="2075"></path></svg></button><pre class="url" id="'+linkurl+'" onclick="copyLink(\''+linkurl+'\',\'countnum\',\''+linkurl+'\');"data-clipboard-action="copy" data-clipboard-target="#linkurl">'+linkurl+'</pre></div>';
 		linksin.innerHTML+=alllink;
 	}
 	
@@ -207,15 +206,15 @@ function changesize(which) {
 	player="player"+which;
 	playin="playin"+which;
 	alert
-	if (document.getElementById(player).style.width=='300px'){
-		document.getElementById(player).style.width='600px';
-		document.getElementById(playin).style.width='600px';
-		document.getElementById(playin).style.height='320px'
-	}
-	else {
+	if (document.getElementById(player).style.width=='600px'){
 		document.getElementById(player).style.width='300px';
 		document.getElementById(playin).style.width='300px';
 		document.getElementById(playin).style.height='168px'
+	}
+	else {
+		document.getElementById(player).style.width='600px';
+		document.getElementById(playin).style.width='600px';
+		document.getElementById(playin).style.height='320px'
 	}
 	
 	// playin.style.setProperty("display","none");
@@ -234,12 +233,30 @@ function refreshplayer(which) {
 
 }
 
-function copylink()
-{
- 
-alert("啊哦，功能还在开发中~\n先直接复制这个网址吧！");
-}
 
+function copyLink(content, which, you) {
+	
+    var aux = document.createElement("input"); 
+    aux.setAttribute("value", content); 
+    document.body.appendChild(aux); 
+    aux.select();
+    document.execCommand("copy"); 
+    document.body.removeChild(aux);
+	which=document.getElementById(which);
+	you=document.getElementById(you);
+    t=which.innerHTML;
+	which.innerHTML+="<small>已复制</small>"
+	//alert(you.onclick)
+	r=you.onclick;
+	you.onclick=Function();
+	setTimeout( function(){
+			which.innerHTML=t;
+			you.onclick=r;
+	}, 1000 );
+	
+
+
+}
 
 //Make the DIV element draggagle:
 
@@ -294,9 +311,6 @@ function Request(strName){
 			return arrTemp[1];
 	}
 	return "";
-}
- function copyLink(a){
-
 }
 	
 $(function(){
