@@ -142,8 +142,8 @@ function find(id) {
 		linksin.innerHTML+=alllink;
 	}
 	
-	history.replaceState("","","?id="+id+"&code="+comment)
-
+	//history.replaceState("","","?id="+id+"&code="+comment)
+	changeURLParam("id",id)
 	changewidth();
 }
 function closewin() {
@@ -152,7 +152,7 @@ function closewin() {
 	open0=0;
 	changewidth();
 
-	history.replaceState("","","?id=")
+	changeURLParam("id","")
 	
 } 
 function changewidth(){
@@ -379,6 +379,21 @@ function getUrlArgStr(){
     }  
     return argStr;  
 }  
-
-
-
+function changeURLParam(name, value) {
+   var url = document.URL, resultUrl = ''
+   var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i')
+   var r = window.location.search.substr(1).match(reg);
+   var replaceText = name + '=' + value;
+   if (r != null) {
+       var tmp = url.replace(unescape(name + '=' + r[2]), replaceText);
+       resultUrl = (tmp);
+   } else {
+       if (url.match('[\?]')) {
+        resultUrl = url + '&' + replaceText;
+       }
+       else {
+        resultUrl = url + '?' + replaceText;
+       }
+   }
+   history.replaceState(null, null, resultUrl)
+}
