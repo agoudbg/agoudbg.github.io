@@ -5,134 +5,10 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-		<title>导播台 - 229资料站</title>
+		<title>导播台 - 229资料站附属</title>
 		
 		<!-- 帮助弹窗css -->
-		<style>
-			/* 弹窗 (background) */
-			.modal {
-				display: none; /* 默认隐藏 */
-				position: fixed; 
-				z-index: 1; 
-				padding-top: 30px; 
-				left: 0;
-				top: 0;
-				width: 100%; 
-				height: 100%; 
-				overflow: auto; 
-				background-color: rgb(0,0,0); 
-				background-color: rgba(0,0,0,0.4);
-			}
-			
-			.myBtn {
-				background-color: black; 
-				border: none;
-				color: white;
-				text-align: center;
-				text-decoration: none;
-				font-size: 16px;
-			}
-
-			/* 弹窗内容 */
-			.modal-content {
-				position: relative;
-				background-color: #fefefe;/* 底色 */
-				margin: auto;
-				padding: 0;
-				border: 1px solid #888;
-				width: 80%;
-				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-				-webkit-animation-name: animatetop;
-				-webkit-animation-duration: 0.4s;
-				animation-name: animatetop;
-				animation-duration: 0.4s
-			}
-
-			/* 添加动画 */
-			@-webkit-keyframes animatetop {
-				from {top:-300px; opacity:0} 
-				to {top:0; opacity:1}
-			}
-
-			@keyframes animatetop {
-				from {top:-300px; opacity:0}
-				to {top:0; opacity:1}
-			}
-
-			/* 关闭按钮 */
-			.close {
-				color: black;
-				float: right;
-				font-size: 28px;
-				font-weight: bold;
-			}
-
-			.close:hover,
-			.close:focus {
-				color: black;
-				text-decoration: none;
-				cursor: pointer;
-			}
-
-			.modal-header {
-				padding: 2px 16px;
-				background-color: #E4E4E4;
-				color: black;
-			}
-
-			.modal-body {padding: 2px 16px;}
-
-			.modal-footer {
-				padding: 2px 16px;
-				background-color: #E4E4E4;
-				color: black;
-			}
-					
-			 
-			/*侧边栏选择器*/
-			.sidenav {
-				height: 100%;
-				width: 0; /*原始宽度为0*/
-				position: fixed;
-				z-index: 1;
-				top: 0;
-				right: 0;
-				background-color: #111;
-				overflow-x: hidden;
-				transition: 0.5s;
-				padding-top: 60px;
-			}
-			 
-			/*侧边栏选项选择器*/
-			.sidenav a {
-				padding: 8px 8px 8px 32px;
-				text-decoration: none;
-				font-size: 25px;
-				color: #818181;
-				display: block;
-				transition: 0.3s;
-			}
-			 
-			/*侧栏标签和关闭按钮光标的效果*/
-			.sidenav a:hover, .offcanvas a:focus{
-				color: #f1f1f1;
-			}
-			 
-			/*侧栏和关闭按钮的位置选择器*/
-			.sidenav .closebtn {
-				position: absolute;
-				top: 0;
-				right: 25px;
-				font-size: 36px;
-				margin-left: 50px;
-			}
-			 
-			<!-- /*当文档高度小于450px时，改变侧栏的padding属性和字体大小*/ -->
-			<!-- @media screen and (max-height: 450px) { -->
-			  <!-- .sidenav {padding-top: 15px;} -->
-			  <!-- .sidenav a {font-size: 18px;} -->
-			<!-- }		 -->
-		</style>
+		<link rel="stylesheet" href="tv.css" type="text/css">
 		
 	</head>
 
@@ -257,49 +133,6 @@
 </div>
 
 
-
-<script>
-	// 获取弹窗
-	var modal = document.getElementById('myModal');
-
-	// 打开弹窗的按钮对象
-	var btn = document.getElementById("myBtn");
-	var btn2 = document.getElementById("go");
-
-	// 获取 <span> 元素，用于关闭弹窗 that closes the modal
-	var span = document.getElementsByClassName("close")[0];
-
-	// 点击按钮打开弹窗
-	btn.onclick = function() {
-		modal.style.display = "block";
-	}
-
-	btn2.onclick = function() {
-		window.open("https://229.junbo.wang");   
-	}
-
-
-	// 点击 <span> (x), 关闭弹窗
-	span.onclick = function() {
-		modal.style.display = "none";
-	}
-
-	// 在用户点击其他地方时，关闭弹窗
-	window.onclick = function(event) {
-		if (event.target == modal) {
-			modal.style.display = "none";
-		}
-	}
-
-</script>
-
-<!-- 自动跳转 -->
-<script>
-	if(navigator.userAgent.indexOf("Android")>0 || navigator.userAgent.indexOf("ios")>0 || navigator.userAgent.indexOf("iPhone")>0 || navigator.userAgent.indexOf("iPad")>0 || navigator.userAgent.indexOf("windows phone")>0){window.location.href="sorry.html";}
-</script>
-
-<script type="text/javascript" src="https://www.wjx.cn/js/ap.js?activity=76432963" id="wjxFloatBtnJsCode"></script>
-	
 	<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
 	<!-- 导播台广告 -->
 	<!-- <ins class="adsbygoogle" -->
@@ -335,19 +168,16 @@
 	<a href="https://229.junbo.wang/live/" style="font-size:16px" target="_blank">频道号列表</a>
 </div>
 
-<!-- 打开右侧 -->
-<script>
-    /*改变原始宽度（0）*/
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "200px";
-    }
-    /*恢复原始宽度0*/
-    function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-    }
+
+<script type="text/javascript" src="tv.js">
 </script>
 
 
+<script type="text/javascript" src="https://www.wjx.cn/js/ap.js?activity=76432963" id="wjxFloatBtnJsCode">
+	
+
+</script>
+<!-- 和alert不共戴天 -->
 <script>
 
 	window.onload = function() {

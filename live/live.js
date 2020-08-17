@@ -21,6 +21,7 @@ let channels=loadc("link.html")
 search("");
 
 var goto=Request("id");
+var comment=Request("code");
 if (goto!="")find(goto);
 
 // var type=Request("type");
@@ -125,7 +126,7 @@ function find(id) {
 	for(i=1;i<=things[4];i++){
 		
 		tag=things[i+4];
-		tagplus='<p class="tag" onclick="closewin();changetab(&quot;'+tag+'&quot;);">'+tag+'</p>';
+		tagplus='<p class="tag" onclick="closewin();document.documentElement.scrollTop = 0;changetab(&quot;'+tag+'&quot;);">'+tag+'</p>';
 		detail_tag.innerHTML+=tagplus;
 	}
 	detail_tag.innerHTML+='<p class="tag" >id: '+id+'</p>';
@@ -137,11 +138,12 @@ function find(id) {
 		
 		linkname=things[2*i+8];
 		linkurl=things[2*i+9];
-		alllink='<div class="singlelink"><p class="introduce linklist">'+linkname+'</p><button class="play" onclick=play("1")><svg t="1595687531264" class="playicon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2074" width="12" height="12"><path d="M870.05628 437.593243L260.040791 19.178254l-0.284443 0.227554a70.59864 70.59864 0 0 0-119.06765 50.289443c0 21.105637-0.910216 62.634249 0 61.724033v774.935278c0 38.399744 31.459346 69.688424 70.371086 69.688424 18.943874 0 36.181092-7.395506 48.810341-19.512758L869.942503 538.172128c13.255023-12.686138 21.617634-30.492241 21.617633-50.232554v-0.227554c0-19.683424-8.248834-37.546416-21.503856-50.175666z" fill="#2c2c2c" p-id="2075"></path></svg></button><pre class="url" id="'+linkurl+'" onclick="copyLink(this);"data-clipboard-action="copy" data-clipboard-target="#linkurl">'+linkurl+'</pre></div>';
+		alllink='<div class="singlelink"><p class="introduce linklist">'+linkname+'</p><button class="play" onclick=play("'+linkurl+'")><svg t="1595687531264" class="playicon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2074" width="12" height="12"><path d="M870.05628 437.593243L260.040791 19.178254l-0.284443 0.227554a70.59864 70.59864 0 0 0-119.06765 50.289443c0 21.105637-0.910216 62.634249 0 61.724033v774.935278c0 38.399744 31.459346 69.688424 70.371086 69.688424 18.943874 0 36.181092-7.395506 48.810341-19.512758L869.942503 538.172128c13.255023-12.686138 21.617634-30.492241 21.617633-50.232554v-0.227554c0-19.683424-8.248834-37.546416-21.503856-50.175666z" fill="#2c2c2c" p-id="2075"></path></svg></button><pre class="url" id="'+linkurl+'" onclick="copyLink(this);"data-clipboard-action="copy" data-clipboard-target="#linkurl">'+linkurl+'</pre></div>';
 		linksin.innerHTML+=alllink;
 	}
 	
 	history.replaceState("","","?id="+id)
+	loadcom();
 	changewidth();
 }
 function closewin() {
@@ -177,8 +179,17 @@ function changewidth(){
 } 
 
 function play(url) {
-	
-	playin.innerHTML='<iframe id="b6" width="100%"  height="100%" marginwidth=0 marginheight=0 frameborder="no" border="0" allowfullscreen="true" src="http://agoudbg.gitee.io/dbt/player.html?id=32" ></iframe> 			'
+
+		
+		if (window.location.href.charAt('4')=='s') {
+			
+			alert('由于大多数直播源采用http方式，需要使用http与本站连接才能播放，现在为您切换。\n切换后也不一定能播放，这是由于CORS policy。')
+
+			window.location.replace("http://229.junbo.wang/"+window.location.pathname);	
+		//alert();
+		}
+
+	playin.innerHTML='<iframe id="b6" width="100%"  height="100%" marginwidth=0 marginheight=0 frameborder="no" border="0" allowfullscreen="true" src="http://agoudbg.gitee.io/dbt/player.html?s='+url+'" ></iframe> 			'
 	player.style.setProperty("display","inline");
 
 }
@@ -193,7 +204,7 @@ function closeplayer() {
 function copylink()
 {
  document.execCommand(location.href); 
-alert("啊哦，功能还在开发中~\n先直接复制这个网址吧！");
+alert("啊哦，功能还在开发中~\n先直接复制这个网址吧！",{time:5,btn:["好","坏"]});
 }
 
 
@@ -283,6 +294,42 @@ function openl(){
 	preview_types.style.setProperty('white-space','normal');
 	preview_types.style.setProperty('overflow','visible');
 	preview_types.style.setProperty('height','auto');
+	preview_types.style.setProperty('padding-right','0px;');
+	function deleteConfirm() {
+    if (window.confirm("你确定要删除吗？")) {
+      return true;//确定返回真
+    }
+    else {
+      return false;//取消返回假
+    }
+  }
+	
 	
 	
 }
+
+function loadcom(){
+	var gitalk = new Gitalk({
+	  clientID: '2f4c6572699d317de549',
+	  clientSecret: 'bdf80ae85bf97d33a202ba92a85769de143f3643',
+	  repo: '229pl',
+	  owner: 'agoudbg',
+	  admin: ['agoudbg'],
+	  id: '229live'//getUrlArgStr(),      // Ensure uniqueness and length less than 50
+	  distractionFreeMode: false  // Facebook-like distraction free mode
+	})
+
+	gitalk.render('gitalk-container')
+}
+//loadcom();
+function getUrlArgStr(){  
+    var q=location.search.substr(1);  
+    var qs=q.split('&');  
+    var argStr='';  
+    if(qs){  
+        for(var i=0;i<qs.length;i++){  
+            argStr+=qs[i].substring(0,qs[i].indexOf('='))+'='+qs[i].substring(qs[i].indexOf('=')+1)+'&';  
+        }  
+    }  
+    return argStr;  
+}  

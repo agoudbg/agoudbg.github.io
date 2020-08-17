@@ -12,7 +12,7 @@
 		<!-- 样式 -->
 		<link rel="stylesheet" type="text/css" href="/css/common.css">
 		<link rel="stylesheet" type="text/css" href="live_style.css">
-		
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 		<!-- <script src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script> -->
 		<style media="screen and (min-width:5px) and (max-width:630px)">
@@ -69,7 +69,7 @@
 				//overflow-x: hidden;
 			}
 			#detail{
-				width:57%;
+				width:53%;
 				right:0px;
 				top:70px;
 				height:90%;
@@ -111,6 +111,9 @@
 				
 				width:20%;
 			}
+			#backToTop{
+				right:65%;
+			}
 
 		</style>
 	</head>
@@ -137,6 +140,7 @@
 				<p class="preview_type" id="新闻" onclick="changetab('新闻')">新闻</p>
 				<p class="preview_type" id="中国教育电视台" onclick="changetab('中国教育电视台')">CETV</p>
 				<p class="preview_type" id="海外" onclick="changetab('海外')">海外</p>
+				<p class="preview_type" ></p><p class="preview_type" ></p><p class="preview_type" ></p><p class="preview_type" ></p>
 				<img class="listtype" id="listtype1" src="more.png" onclick="openl();"></img>
 				<img class="listtype" id="listtype2" src="morelight.png" onclick="openl();"></img>
 		</div>
@@ -185,10 +189,14 @@
 					<div id="linksin">
 					
 					</div>
+					<p class="introduce dh2">评论<small id="countnum">（暂不支持分频道评论）</small></p>
+
+					<div id="gitalk-container"></div>
 			
 
 				</div>
-				<div class="white"><p class="nomore"><br /><br /><br />啊哦，没有更多了~</p></div>
+				
+				<div class="white"><p class="nomore"><br /><br /><br /><a class="introduce right" href="https://www.wjx.cn/jq/77494889.aspx">反馈问题&gt;</a><br /><br /><br />啊哦，没有更多了~</p></div>
 				
 			</div>
 			<script src="/footer.js"></script>
@@ -205,6 +213,8 @@
 		<!-- 上面是正文 -->
 
 	</body>
+			<script src="gitalk.min.js"></script>
+
 			<script src="live.js"></script>
 
 
