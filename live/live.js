@@ -185,7 +185,7 @@ function play(url) {
 			
 			alert('由于大多数直播源采用http方式，需要使用http与本站连接才能播放，现在为您切换。\n切换后也不一定能播放，这是由于CORS policy。')
 
-			window.location.replace("http://229.junbo.wang/"+window.location.pathname);	
+			window.location.replace("http://229.junbo.wang/"+window.location.pathname+window.location.search);	
 		//alert();
 		}
 
@@ -295,15 +295,7 @@ function openl(){
 	preview_types.style.setProperty('overflow','visible');
 	preview_types.style.setProperty('height','auto');
 	preview_types.style.setProperty('padding-right','0px;');
-	function deleteConfirm() {
-    if (window.confirm("你确定要删除吗？")) {
-      return true;//确定返回真
-    }
-    else {
-      return false;//取消返回假
-    }
-  }
-	
+
 	
 	
 }
@@ -316,7 +308,7 @@ function loadcom(){
 	  owner: 'agoudbg',
 	  admin: ['agoudbg'],
 	  id: '229live',//getUrlArgStr(),      // Ensure uniqueness and length less than 50
-	  distractionFreeMode: false  // Facebook-like distraction free mode
+	  distractionFreeMode: true  // Facebook-like distraction free mode
 	})
 
 	gitalk.render('gitalk-container')
