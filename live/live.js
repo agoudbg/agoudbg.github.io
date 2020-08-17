@@ -349,8 +349,8 @@ function openl(){
 
 function loadcom(){
 	var gitalk = new Gitalk({
-	  clientID: '76bfd2f95314fd2e73b6',
-	  clientSecret: '442add24fe2c49c7eaebda2ce6833ae82617425c',
+	  clientID: '6ec2821d1b488c564984',
+	  clientSecret: '8fa83ddc073934286c9140a8c2fd7864f2fdc331',
 	  repo: '229pl',
 	  owner: 'agoudbg',
 	  admin: ['agoudbg'],
