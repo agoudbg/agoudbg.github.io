@@ -261,7 +261,7 @@ function copyLink(content, which, you) {
 	setTimeout( function(){
 			which.innerHTML=t;
 			you.onclick=r;
-	}, 1000 );
+	}, 5000 );
 	
 
 
