@@ -1,7 +1,8 @@
-var open=0;
+var open0=0;
 var single;
 searched=0;
 whatsea="";
+playernum=0;
 
 type=document.getElementById("alltype");
 type.style.setProperty('background-color','grey');
@@ -114,7 +115,7 @@ function search(words){
 
 
 function find(id) {
-	open=1;
+	open0=1;
 	//var id,name,photo,scrnum,introduce;
 	details=getdetail(id);
 	things=details[1].split(",");
@@ -149,14 +150,14 @@ function find(id) {
 function closewin() {
 	detail.style.setProperty('left','100%');
 	dheader_sharesvg.style.cssText="display:none;";
-	open=0;
+	open0=0;
 	changewidth();
 
 	history.replaceState("","","?id=")
 	
 } 
 function changewidth(){
-	if (open==1){
+	if (open0==1){
 		if (window.innerWidth>630){
 			
 			detail.style.cssText="display:inline"
@@ -188,28 +189,60 @@ function play(url) {
 			window.location.replace("http://229.junbo.wang/"+window.location.pathname+window.location.search);	
 		//alert();
 		}
+	players.innerHTML+='<div class="player" id="player'+playernum+'" onmousemove="dragElement(this);"><div class="bar" id="bar'+playernum+'"><svg t="1595741392405"  class="closeplayer" onclick="closeplayer(\''+playernum+'\');" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2045" width="20" height="20"><path d="M519.02036023 459.47959989L221.8941505 162.35411435a37.07885742 37.07885742 0 1 0-52.45354772 52.40502656l297.12476134 297.15010821L169.44060278 809.05863314a37.07885742 37.07885742 0 1 0 52.42964924 52.42892505l297.15010821-297.12476136 297.15010822 297.12476136a37.07885742 37.07885742 0 1 0 52.42892504-52.40430237l-297.12476135-297.1740067 297.12476135-297.12548553a37.07885742 37.07885742 0 1 0-52.42892504-52.42964924L519.04498291 459.47959989z" fill="#2c2c2c" p-id="2046"></path></svg><svg t="1597646897891" class="closeplayer changesize" onclick="changesize(\''+playernum+'\');"viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3287" width="20" height="20"><path d="M921.6 0a102.4 102.4 0 0 1 102.4 102.4v819.2a102.4 102.4 0 0 1-102.4 102.4H102.4a102.4 102.4 0 0 1-102.4-102.4V102.4a102.4 102.4 0 0 1 102.4-102.4h819.2z m-51.2 51.2H153.6a102.4 102.4 0 0 0-102.4 102.4v716.8a102.4 102.4 0 0 0 102.4 102.4h716.8a102.4 102.4 0 0 0 102.4-102.4V153.6a102.4 102.4 0 0 0-102.4-102.4zM460.8 460.8a102.4 102.4 0 0 1 102.4 102.4v256a102.4 102.4 0 0 1-102.4 102.4H204.8a102.4 102.4 0 0 1-102.4-102.4v-256a102.4 102.4 0 0 1 102.4-102.4h256z m-51.2 51.2H256a102.4 102.4 0 0 0-102.4 102.4v153.6a102.4 102.4 0 0 0 102.4 102.4h153.6a102.4 102.4 0 0 0 102.4-102.4v-153.6a102.4 102.4 0 0 0-102.4-102.4z" p-id="3288"></path><path d="M665.6 153.6v51.2h168.96l-230.4 234.7008 35.84 35.84L870.4 240.64V409.6h51.2V153.6z" p-id="3289"></path></svg><svg t="1597647036129" class="closeplayer" onclick="openinnew(\''+playernum+'\');" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4139" width="20" height="20"><path d="M692.610189 1023.597872H159.388812C73.552819 1023.597872 0 949.606369 0 857.11699V320.605476C0 234.330799 73.552819 160.339295 159.388812 160.339295h533.221377c91.941023 0 165.493842 73.991503 165.493842 160.302738v536.474957c0 92.489379-73.552819 166.480883-165.493842 166.480882zM159.388812 234.257684c-42.881439 0-85.799436 43.210453-85.799436 92.562494v536.438399c0 43.173896 36.776409 80.169648 85.799436 80.169648h533.257934c42.917997 0 79.694406-36.995752 79.694406-80.169648V320.642033c0-43.137339-36.776409-86.311235-79.694406-86.311234L159.388812 234.257684z m821.327621 709.207098c-24.493235 0-42.881439-18.534433-42.88144-43.173896V160.339295c0-43.173896-36.776409-86.347792-79.694405-86.347792H122.575845c-24.493235 0-36.776409-12.319732-36.776409-36.995751S98.08261 0 122.575845 0h735.528186C950.045054 0 1023.597872 73.991503 1023.597872 160.339295v739.915034c0 24.67602-18.388205 43.173896-42.917996 43.173896z" p-id="4140"></path></svg><svg t="1597651619837" class="closeplayer" onclick="refreshplayer(\''+playernum+'\');" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2639" width="20" height="20"><path d="M 888.23 392.083 L 718.385 392.083 c -21.6679 0 -39.1942 -17.5561 -39.1942 -39.1961 c 0 -21.6382 17.5273 -39.1942 39.1942 -39.1942 l 68.1819 0 c -61.5039 -86.9065 -162.641 -143.715 -277.223 -143.715 c -187.607 0 -339.692 152.086 -339.692 339.69 c 0 187.606 152.086 339.691 339.692 339.691 c 187.606 0 339.691 -152.086 339.691 -339.691 c 0 -21.6382 17.5264 -39.1942 39.1933 -39.1942 c 21.64 0 39.1971 17.5561 39.1971 39.1942 c 0 230.899 -187.2 418.082 -418.082 418.082 c -230.885 0 -418.083 -187.182 -418.083 -418.082 c 0 -230.898 187.198 -418.081 418.083 -418.081 c 140.127 0 263.895 69.0866 339.691 174.935 l 0 -70.4143 c 0 -21.64 17.5264 -39.1952 39.1933 -39.1952 c 21.64 0 39.1971 17.5552 39.1971 39.1952 l 0 156.78 C 927.427 374.527 909.868 392.083 888.23 392.083 Z" fill="#333333" p-id="2640"></path></svg>'+dheader_title.innerHTML+'</div><div class="playin" id="playin'+playernum+'"><iframe id="'+playernum+'" width="100%"  height="100%" marginwidth=0 marginheight=0 frameborder="no" border="0" allowfullscreen="true" src="http://agoudbg.gitee.io/dbt/player.html?s='+url+'" ></iframe></div></div>'
 
-	playin.innerHTML='<iframe id="b6" width="100%"  height="100%" marginwidth=0 marginheight=0 frameborder="no" border="0" allowfullscreen="true" src="http://agoudbg.gitee.io/dbt/player.html?s='+url+'" ></iframe> 			'
-	player.style.setProperty("display","inline");
-
+	document.getElementById(("player"+playernum)).style.setProperty("display","inline");
+	dragElement(document.getElementById(("player"+playernum)));
+	playernum++;
 }
 
-function closeplayer() {
+function closeplayer(which) {
+	player="player"+which;
 	
-	playin.innerHTML='<p>播放器已关闭</p> 			'
-	player.style.setProperty("display","none");
+	document.getElementById(player).innerHTML=''
+	// playin.style.setProperty("display","none");
+
+}
+function changesize(which) {
+	player="player"+which;
+	playin="playin"+which;
+	alert
+	if (document.getElementById(player).style.width=='300px'){
+		document.getElementById(player).style.width='600px';
+		document.getElementById(playin).style.width='600px';
+		document.getElementById(playin).style.height='320px'
+	}
+	else {
+		document.getElementById(player).style.width='300px';
+		document.getElementById(playin).style.width='300px';
+		document.getElementById(playin).style.height='168px'
+	}
+	
+	// playin.style.setProperty("display","none");
+
+}
+function openinnew(which) {
+
+	window.open(document.getElementById(which).src);
+	
+	closeplayer(which);
+
+}
+function refreshplayer(which) {
+
+	document.getElementById(which).src=document.getElementById(which).src;
 
 }
 
 function copylink()
 {
- document.execCommand(location.href); 
-alert("啊哦，功能还在开发中~\n先直接复制这个网址吧！",{time:5,btn:["好","坏"]});
+ 
+alert("啊哦，功能还在开发中~\n先直接复制这个网址吧！");
 }
 
 
 //Make the DIV element draggagle:
-dragElement(document.getElementById(("player")));
+
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -325,3 +358,6 @@ function getUrlArgStr(){
     }  
     return argStr;  
 }  
+
+
+
