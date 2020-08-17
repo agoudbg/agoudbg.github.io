@@ -143,6 +143,11 @@ function find(id) {
 	}
 	
 	history.replaceState("","","?id="+id)
+	if (window.location.href.charAt('4')!='s') {
+			
+			pinglun.innerHTML+="<small>在http模式下暂不能添加评论。</small>"
+			
+		}
 	loadcom();
 	changewidth();
 }
@@ -346,35 +351,20 @@ function openl(){
 	
 	
 }
-if (window.location.href.charAt('4')=='s') {
-	function loadcom(){
-		var gitalk = new Gitalk({
-		  clientID: '6ec2821d1b488c564984',
-		  clientSecret: '8fa83ddc073934286c9140a8c2fd7864f2fdc331',
-		  repo: '229pl',
-		  owner: 'agoudbg',
-		  admin: ['agoudbg'],
-		  id: location.pathname,//getUrlArgStr(),      // Ensure uniqueness and length less than 50
-		  distractionFreeMode: true  // Facebook-like distraction free mode
-		})
 
-		gitalk.render('gitalk-container')
-	}
+function loadcom(plid,pls){
+	gitalk = new Gitalk({
+	  clientID: '6ec2821d1b488c564984',
+	  clientSecret: '8fa83ddc073934286c9140a8c2fd7864f2fdc331',
+	  repo: '229pl',
+	  owner: 'agoudbg',
+	  admin: ['agoudbg'],
+	  id: location.pathname,//getUrlArgStr(),      // Ensure uniqueness and length less than 50
+	  distractionFreeMode: true  // Facebook-like distraction free mode
+	})
+
+	gitalk.render('gitalk-container')
 }
-else
-	function loadcom(){
-		var gitalk = new Gitalk({
-		  clientID: '50f003d3c97043178527',
-		  clientSecret: 'a69999d7f801af721fc822f70ba10b4df17955a7',
-		  repo: '229pl',
-		  owner: 'agoudbg',
-		  admin: ['agoudbg'],
-		  id: location.pathname,//getUrlArgStr(),      // Ensure uniqueness and length less than 50
-		  distractionFreeMode: true  // Facebook-like distraction free mode
-		})
-
-		gitalk.render('gitalk-container')
-	}
 
 
 //loadcom();
