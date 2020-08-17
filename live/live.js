@@ -354,7 +354,7 @@ function loadcom(){
 	  repo: '229pl',
 	  owner: 'agoudbg',
 	  admin: ['agoudbg'],
-	  id: '229live',//getUrlArgStr(),      // Ensure uniqueness and length less than 50
+	  id: location.pathname,//getUrlArgStr(),      // Ensure uniqueness and length less than 50
 	  distractionFreeMode: true  // Facebook-like distraction free mode
 	})
 
