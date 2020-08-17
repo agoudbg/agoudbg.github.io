@@ -461,7 +461,7 @@
     background:url(upi.png)  no-repeat  left top;
 }
 #gitalk-container{
-	margin:10px;
+	margin:40px 20px;
 }
 @media (prefers-color-scheme: dark) {
 	
