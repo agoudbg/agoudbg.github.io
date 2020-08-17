@@ -3,6 +3,7 @@ var single;
 searched=0;
 whatsea="";
 playernum=0;
+tit=document.title;
 type=document.getElementById("alltype");
 type.style.setProperty('background-color','grey');
 type.style.setProperty('color','white');
@@ -149,6 +150,9 @@ function find(id) {
 	//history.replaceState("","","?id="+id+"&code="+comment)
 	changeURLParam("id",id)
 	changewidth();
+	
+
+	document.title=things[0]+" - "+tit;
 }
 function closewin() {
 	detail.style.setProperty('left','100%');
@@ -157,6 +161,7 @@ function closewin() {
 	changewidth();
 
 	changeURLParam("id","")
+	document.title=tit;
 	
 } 
 function changewidth(){
