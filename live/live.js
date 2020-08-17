@@ -310,12 +310,12 @@ function openl(){
 
 function loadcom(){
 	var gitalk = new Gitalk({
-	  clientID: '2f4c6572699d317de549',
-	  clientSecret: 'bdf80ae85bf97d33a202ba92a85769de143f3643',
+	  clientID: '76bfd2f95314fd2e73b6',
+	  clientSecret: '442add24fe2c49c7eaebda2ce6833ae82617425c',
 	  repo: '229pl',
 	  owner: 'agoudbg',
 	  admin: ['agoudbg'],
-	  id: '229live'//getUrlArgStr(),      // Ensure uniqueness and length less than 50
+	  id: '229live',//getUrlArgStr(),      // Ensure uniqueness and length less than 50
 	  distractionFreeMode: false  // Facebook-like distraction free mode
 	})
 
