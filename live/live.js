@@ -375,7 +375,7 @@ else
 
 		gitalk.render('gitalk-container')
 	}
-}
+
 
 //loadcom();
 function getUrlArgStr(){  
