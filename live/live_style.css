@@ -460,6 +460,9 @@
 #backToTop:hover {
     background:url(upi.png)  no-repeat  left top;
 }
+#gitalk-container{
+	margin:10px;
+}
 @media (prefers-color-scheme: dark) {
 	
 	#preview{
