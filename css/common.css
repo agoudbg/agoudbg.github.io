@@ -1,17 +1,23 @@
+
+
+body{
+	line-height:normal;
+}
+
 body {
 	font-family:PingFangSC-Regular;	
 }
 
-a:link{
+a:not(.weui-dialog__btn):not(.header-link):not(.footer-a):link{
 	text-decoration:none;
 	color:blue;
 }
-a:hover
+a:not(.weui-dialog__btn):not(.header-link):not(.footer-a):hover
 {
 	text-decoration:underline;
 	color:blue;
 }
-a:visited{
+a:not(.weui-dialog__btn):not(.header-link):not(.footer-a):visited{
 	color:blue;
 	text-decoration:none;
 }
@@ -40,15 +46,15 @@ a:visited{
 		color: white;
 		background: #262626;
 	}
-	a:link{
+	a:not(.weui-dialog__btn):not(.header-link):not(.footer-a):link{
 		text-decoration:none;
 		color:#00B0F0;
 	}
-	a:hover{
+	a:not(.weui-dialog__btn):not(.header-link):not(.footer-a):hover{
 		text-decoration:underline;
 		color:#00B0F0;
 	}
-	a:visited{
+	a:not(.weui-dialog__btn):not(.header-link):not(.footer-a):visited{
 		color:#00B0F0;
 		text-decoration:none;
 	}

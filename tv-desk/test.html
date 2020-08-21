@@ -1,0 +1,25 @@
+
+ 
+<html>
+ <head></head>
+ <body> 
+  <input id="txt1"></input>
+  <input id="txt2"></input>
+  <input id="btn1" type="button" value="go" /> 
+ </body>
+</html>
+<script>
+window.onload = function() {
+    //获取id
+    var oTxt1 = document.getElementById('txt1');
+    var oTxt2 = document.getElementById('txt2');
+    var oBtn = document.getElementById('btn1');
+    //点击
+    oBtn.onclick = function() {
+        //跳页不变网址
+        var oNewWin = window.open("player.html?t="+oTxt1.value+"&id="+oTxt2.value);
+        //新页面传参
+        <!-- oNewWin.document.write(oTxt.value); -->
+    };
+}
+</script>

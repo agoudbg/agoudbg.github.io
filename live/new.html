@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="zh">
 	<head>
 
 		<meta charset="utf-8" />
@@ -10,12 +10,13 @@
 		<meta name='apple-mobile-web-app-status-bar-style' content='black'>
 		<meta name='format-detection' content='telephone=no'>
 		<!-- 样式 -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 		<link rel="stylesheet" type="text/css" href="/css/common.css">
 		<link rel="stylesheet" type="text/css" href="live_style.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
-		<!-- <script src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script> -->
-		<style media="screen and (min-width:5px) and (max-width:630px)">
+		<link rel="stylesheet" type="text/css" href="/css/weui.css">
+
+
+		<style media="screen and (max-width:630px)">
 			#detail{
 				width:100%;
 				right:0px;
@@ -51,7 +52,7 @@
 			}
 			
 		</style>
-		<style media="screen and (min-width:630px) and (max-width:10000px)">
+		<style media="screen and (min-width:630px)">
 			#preview{
 				
 				width:35%;
@@ -61,7 +62,7 @@
 				//overflow-x: hidden;
 			}
 			.listtype{
-				left:32%;	
+				right:63%;	
 }
 			.livehead{
 				
@@ -84,7 +85,7 @@
 				z-index:999;
 			}
 			#dheader_title{
-				margin-left:-43%;
+				margin-left:-47%;
 			}
 			#dheader_back{
 				display:none;
@@ -168,8 +169,8 @@
 				<div id="dheader_main" class="height">
 				<p id="dheader_back" onclick="closewin()">返回</p>
 				<svg t="1595519506428" onclick="closewin()" id="dheader_backsvg" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2349" width="21" height="21"><path d="M314.011 489.179c-12.496 12.496-12.497 32.758-0.001 45.256 12.496 12.496 32.759 12.497 45.254 0.001L709.989 183.71c12.498-12.498 12.497-32.76-0.001-45.257-12.496-12.495-32.757-12.495-45.253 0.001L314.011 489.179z" p-id="2350" fill="#3776F4"></path><path d="M664.734 885.546c12.496 12.496 32.759 12.497 45.254 0.002 12.498-12.497 12.498-32.759 0-45.257L359.266 489.569c-12.497-12.498-32.76-12.498-45.256 0-12.496 12.496-12.496 32.758 0.001 45.254l350.723 350.723z" p-id="2351" fill="#3776F4"></path></svg>
-				<svg t="1595593862266" id="dheader_sharesvg" onclick="copyLink(location.href,'dheader_title', 'dheader_sharesvg');"viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3307" width="22" height="22"><path d="M398.933333 206.933333 490.666667 115.2 490.666667 618.666667c0 12.8 8.533333 21.333333 21.333333 21.333333s21.333333-8.533333 21.333333-21.333333L533.333333 115.2l91.733333 91.733333C629.333333 211.2 633.6 213.333333 640 213.333333s10.666667-2.133333 14.933333-6.4c8.533333-8.533333 8.533333-21.333333 0-29.866667l-128-128c-2.133333-2.133333-4.266667-4.266667-6.4-4.266667-4.266667-2.133333-10.666667-2.133333-17.066667 0-2.133333 2.133333-4.266667 2.133333-6.4 4.266667l-128 128c-8.533333 8.533333-8.533333 21.333333 0 29.866667S390.4 215.466667 398.933333 206.933333zM810.666667 298.666667l-170.666667 0 0 42.666667 170.666667 0 0 597.333333L213.333333 938.666667 213.333333 341.333333l170.666667 0 0-42.666667-170.666667 0c-23.466667 0-42.666667 19.2-42.666667 42.666667l0 597.333333c0 23.466667 19.2 42.666667 42.666667 42.666667l597.333333 0c23.466667 0 42.666667-19.2 42.666667-42.666667L853.333333 341.333333C853.333333 317.866667 834.133333 298.666667 810.666667 298.666667z" p-id="3308" fill="#3776F4"></path></svg>
-				<p id="dheader_title"\>---</p>
+				<svg t="1595593862266" id="dheader_sharesvg" onclick="openshare();"viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3307" width="22" height="22"><path d="M398.933333 206.933333 490.666667 115.2 490.666667 618.666667c0 12.8 8.533333 21.333333 21.333333 21.333333s21.333333-8.533333 21.333333-21.333333L533.333333 115.2l91.733333 91.733333C629.333333 211.2 633.6 213.333333 640 213.333333s10.666667-2.133333 14.933333-6.4c8.533333-8.533333 8.533333-21.333333 0-29.866667l-128-128c-2.133333-2.133333-4.266667-4.266667-6.4-4.266667-4.266667-2.133333-10.666667-2.133333-17.066667 0-2.133333 2.133333-4.266667 2.133333-6.4 4.266667l-128 128c-8.533333 8.533333-8.533333 21.333333 0 29.866667S390.4 215.466667 398.933333 206.933333zM810.666667 298.666667l-170.666667 0 0 42.666667 170.666667 0 0 597.333333L213.333333 938.666667 213.333333 341.333333l170.666667 0 0-42.666667-170.666667 0c-23.466667 0-42.666667 19.2-42.666667 42.666667l0 597.333333c0 23.466667 19.2 42.666667 42.666667 42.666667l597.333333 0c23.466667 0 42.666667-19.2 42.666667-42.666667L853.333333 341.333333C853.333333 317.866667 834.133333 298.666667 810.666667 298.666667z" p-id="3308" fill="#3776F4"></path></svg>
+				<p id="dheader_title">---</p>
 				
 				</div>
 				<div id="placeholder" class="height2">
@@ -208,10 +209,48 @@
 		<div id="players"></div>
 	
 		<svg id="nothingopening" onclick="alert('你还真是有探索精神呢~我喜欢');" t="1595603622672" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1298" width="200" height="200"><path d="M815.40740693 490.91318507l138.5054816-66.90133334A30.34074027 30.34074027 0 0 1 997.45185172 451.3185184V786.58370346a30.34074027 30.34074027 0 0 1-43.53896319 27.30666671L815.40740693 746.95869652V876.08888853a60.6814816 60.6814816 0 0 1-60.68148053 60.68148161H87.22962988a60.6814816 60.6814816 0 0 1-60.68148165-60.68148161V390.63703679a60.6814816 60.6814816 0 0 1 60.68148165-60.68148159h667.49629652a60.6814816 60.6814816 0 0 1 60.68148053 60.68148159v100.27614828z m0 188.20361492l119.23911147 57.58672641v-235.5351712L815.40740693 558.72474027v120.36171945zM87.22962988 390.63703679v485.45185174h667.49629652V390.63703679H87.22962988z m424.77037012-91.02222186a121.36296321 121.36296321 0 1 1 0-242.7259264 121.36296321 121.36296321 0 0 1 0 242.7259264z m0-60.6814816a60.6814816 60.6814816 0 1 0 0-121.36296321 60.6814816 60.6814816 0 0 0 0 121.36296321z m-242.7259264 60.6814816a91.02222187 91.02222187 0 1 1 0-182.04444479 91.02222187 91.02222187 0 0 1 0 182.04444479z m0-60.6814816a30.34074027 30.34074027 0 1 0 0-60.6814816 30.34074027 30.34074027 0 0 0 0 60.6814816z m60.6814816 507.38820694v-242.72592534a30.34074027 30.34074027 0 0 1 45.38974829-26.3357632l212.38518504 121.36296321a30.34074027 30.34074027 0 0 1 0 52.67152533l-212.38518507 121.36296319A30.34074027 30.34074027 0 0 1 329.9555552 746.32154027z m60.68148161-190.4488288V694.0444448l120.87751146-69.08586667L390.63703679 555.87271147z" fill="#8a8a8a" p-id="1299"></path></svg>
+		<div class="js_dialog" id="iosDialog1" style="display: none;">
+            <div class="weui-mask"></div>
+            <div class="weui-dialog">
+                <div class="weui-dialog__hd"><strong class="weui-dialog__title">切换到http连接</strong></div>
+                <div class="weui-dialog__bd"><p>由于大多数直播源采用http方式，需要使用http与本站连接才能播放，<b>点击“好”即可切换</b>。</p><p>切换后也不一定能播放，这是由于CORS policy。</p></div>
+                <div class="weui-dialog__ft">
+                    <a href="javascript:iosDialog1.style.setProperty('display','none');" class="weui-dialog__btn weui-dialog__btn_default">取消</a>
+                    <a id="turnhttp" href="" class="weui-dialog__btn weui-dialog__btn_primary">好</a>
+                </div>
+            </div>
+        </div>
+	<div id="toast" style="opacity: 0;display: none ">
+        <!-- <div class="weui-mask_transparent"></div> -->
+        <div class="weui-toast">
+            <i class="weui-icon-success-no-circle weui-icon_toast"></i>
+            <p class="weui-toast__content" id="toast_text"></p>
+        </div>
+    </div>
+	<div class="weui-mask" id="weui-mask" onclick="closeshare();"></div>
+	<div id="js_dialog_1" class="weui-half-screen-dialog weui-half-screen-dialog_show">
+                <div class="weui-half-screen-dialog__hd">
+                  <div class="weui-half-screen-dialog__hd__side">
+                    <button class="weui-icon-btn" onclick="closeshare();">关闭<i class="weui-icon-close-thin"></i></button>
+                  </div>
+                  <div class="weui-half-screen-dialog__hd__main">
+                    <strong class="weui-half-screen-dialog__title">分享</strong>
+                  </div>
+                </div>
+                <div class="weui-half-screen-dialog__bd">
+					<div class="share"onclick="copyLink(location.href,'复制成功，快去分享给好友吧', 'dheader_sharesvg');closeshare();">
+						<p class="sharep"><img class="shareimg" src="copy.png"></p>
+						<p class="sharep">复制链接</p>
+					</div>
+			
+
+				</div>
+		
 		<!-- 上面是正文 -->
 
 	</body>
 			<script src="gitalk.min.js"></script>
+			<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 
 			<script src="live.js"></script>
 
