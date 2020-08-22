@@ -132,7 +132,9 @@
 		<div id="preview">
 		<h1 style="text-align:center;">直播中心<small>Beta</small></h1>
 		<small>本站直播资源均来自互联网，本站仅对相关资源进行搜集整理。所有资源仅供学习交流使用。<br /><br /></small>
-			<input id="searchbox" placeholder="搜索……" onporpertychanger="" oninput="changetab('alltype');searched=0;search(searchbox.value);"></input>
+			<input id="searchbox" placeholder="搜索……" onporpertychanger="" oninput="changetab('alltype');searched=0;search(searchbox.value);">
+				<!-- <svg t="1598069351220" class="icon searchsvg" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2107" width="20" height="20"><path d="M400.704 801.408A400.64 400.64 0 1 1 400.704 0a400.64 400.64 0 0 1 0 801.408z m0-89.024a311.68 311.68 0 1 0 0-623.36 311.68 311.68 0 0 0 0 623.36z m267.264-110.4l314.752 314.88-62.912 62.912-314.816-314.816 62.976-62.976z" p-id="2108" fill="#8a8a8a"></path></svg> -->
+			</input>
 			<div id="preview_types">
 				
 				<p class="preview_type" id="alltype" onclick="changetab('alltype')">全部</p>
@@ -193,7 +195,7 @@
 					<div id="linksin">
 					
 					</div>
-					<p class="introduce dh2" id="pinglun">评论<small>（暂不支持分频道评论）<br />*对Gitalk的安全性尚存在争议。</small></p>
+					<p class="introduce dh2" id="pinglun">评论<small>（暂不支持分频道评论）<br /><small>*对Gitalk的安全性尚存在争议。<br /></small></small></p>
 
 					<div id="gitalk-container"></div>
 			
@@ -238,7 +240,7 @@
                   </div>
                 </div>
                 <div class="weui-half-screen-dialog__bd">
-					<div class="share"onclick="copyLink(location.href,'复制成功，快去分享给好友吧', 'dheader_sharesvg');closeshare();">
+					<div class="share"onclick="copyLink(location.href+'&from=copylink','复制成功，快去分享给好友吧', 'dheader_sharesvg');closeshare();">
 						<p class="sharep"><img class="shareimg" src="copy.png"></p>
 						<p class="sharep">复制链接</p>
 					</div>

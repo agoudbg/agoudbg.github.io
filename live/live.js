@@ -1,13 +1,11 @@
 var open0=0;
 var single;
+id=0;
 searched=0;
 whatsea="";
 playernum=0;
 tit=document.title;
-type=document.getElementById("alltype");
-type.style.setProperty('background-color','grey');
-type.style.setProperty('color','white');
-type.style.setProperty('font-weight','bold');
+
 //设置读取内容
 function loadc(name) {
     let xhr = new XMLHttpRequest(),
@@ -19,7 +17,8 @@ function loadc(name) {
 }
 let channels=loadc("link.html")
 
-search("");
+changetab("alltype");
+
 
 var goto=Request("id");
 var comment=Request("code");
@@ -38,13 +37,9 @@ function changetab(c){
 	type=document.getElementsByClassName("preview_type");
 	a=0;
 	while (a<9){
-		if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-			type[a].style.setProperty('background-color','#3B3B3B');
-			type[a].style.setProperty('color','white');
-		}else{
-			type[a].style.setProperty('background-color','#F7F7F7');
-			type[a].style.setProperty('color','black');
-		}
+		type[a].style.setProperty('background-color','transparent');
+		type[a].style.color='';
+
 		type[a].style.setProperty('font-weight','normal');
 		
 		a++;
@@ -56,11 +51,13 @@ function changetab(c){
 		type.style.setProperty('color','white');
 		type.style.setProperty('font-weight','bold');
 	}
+	//else preview_types.style.height="0"; 
 	searched=0;
 	if (c=='alltype')search('');
 	else search(","+c+",");
 	
-	changeURLParam('t', c)
+	// changeURLParam('t', c)
+	
 }
 
 function getdetail(id){
@@ -82,7 +79,7 @@ function search(words){
 	else{
 		whatsea=words;
 		showmore.innerHTML="加载更多";
-		changeURLParam('words', whatsea);
+		// changeURLParam('words', whatsea);
 	}
 	singlecount=0;
 	if (searched==0){
@@ -193,7 +190,8 @@ function play(url) {
 	if (window.location.href.charAt('4')=='s') {
 		
 		iosDialog1.style.setProperty('display','inline');
-		turnhttp.href=("http://229.junbo.wang"+window.location.pathname+window.location.search);	
+		document.getElementById('weui-mask').style.display="inline";
+		turnhttp.href=("http://229.junbo.wang"+window.location.pathname+window.location.search+"&from=https");	
 	//alert();
 	}
 	else{
@@ -208,7 +206,8 @@ function play(url) {
 function closeplayer(which) {
 	player="player"+which;
 	
-	document.getElementById(player).innerHTML=''
+	document.getElementById(player).innerHTML='';
+	document.getElementById(player).style.display=none;
 	// playin.style.setProperty("display","none");
 
 }

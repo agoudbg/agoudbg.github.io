@@ -4,15 +4,31 @@
 	width:96%;
 	margin-left: -4px;
 	margin-bottom:-3px;
+	background-color:#F3F3F3;
 	height: 25px;
 	font-size:17px;
 	padding:5px 10px;
 	border-width:2px;
-	border-style:solid;
-	border-radius:5px;
+	border-style:none;
+	border-radius:7px;
+	display:inline-block;
 	
 }
 
+.searchsvg{
+	
+	//color:#3776F4;
+	font-size:19px;
+	padding-top:-0px;
+	margin-top:4px;
+	right:20px;
+	//padding-right:auto;
+	//left:50%;
+	//font-weight:bold;
+	position:absolute;
+	cursor: pointer;
+	float:right;
+}
 #preview_types{
 	
 	overflow: auto;
@@ -24,7 +40,20 @@
 	padding-top:6px;
 	//padding-right:-300px;
 	background-color: #F7F7F7;
+	color:black;
+	
+	transition: height 0.25s;
+	-moz-transition: height 0.25s;	/* Firefox 4 */
+	-webkit-transition: height 0.25s;	/* Safari 和 Chrome */
+	-o-transition: height 0.25s;	/* Opera */
 
+
+}
+
+.preview_type:hover{
+	
+	background-color:#E1E1E1;
+	
 }
 
 .br{
@@ -73,7 +102,7 @@
 
 .preview_type{
 	
-	background-color: #F7F7F7;
+	background-color: transparent;
 	padding: 10px 10px 10px 10px;
 	margin-top:0px;
 	margin-bottom:2px;
@@ -382,14 +411,14 @@
 
 .player {
 	position: fixed;
-	top: 70px;
-	left: 16px;
+	
+	top:60%;
 	width: 300px;
 	z-index:9999;
 	display:none;
 	padding:0;
 	margin:0;
-	box-shadow: 0px 0px 5px black;
+	/* box-shadow: 0px 0px 5px black; */
 	border-radius:6px;
 	transition: width 0.25s;
 	-moz-transition: width 0.25s;	/* Firefox 4 */
@@ -412,6 +441,8 @@
 	//display:none;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	box-shadow: 0px 0px 5px black;
+
 
 }
 
@@ -425,7 +456,10 @@
 	padding:0;
 	margin:0;
 	height:168px;
+	box-shadow: 0px 0px 5px black;
 	
+	border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;	
 	
 	transition: width 0.25s;
 	-moz-transition: width 0.25s;	/* Firefox 4 */
@@ -495,15 +529,19 @@ iframe{
 
 #js_dialog_1{
 	bottom:-300px;
-	transition: bottom 0.25s;
-	-moz-transition: bottom 0.25s;	/* Firefox 4 */
-	-webkit-transition: bottom 0.25s;	/* Safari 和 Chrome */
-	-o-transition: bottom 0.25s;	/* Opera */
+	transition: bottom 0.5s;
+	-moz-transition: bottom 0.5s;	/* Firefox 4 */
+	-webkit-transition: bottom 0.5s;	/* Safari 和 Chrome */
+	-o-transition: bottom 0.5s;	/* Opera */
 
 }
 .weui-mask{
 	display:none;
-	
+	transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;	/* Firefox 4 */
+	-webkit-transition: opacity 0.5s;	/* Safari 和 Chrome */
+	-o-transition: opacity 0.5s;	/* Opera */
+
 }
 .share{
 	
@@ -555,12 +593,18 @@ iframe{
 	#preview_types{
 		
 		background-color:#3B3B3B;
+		color:white;
+	}
+	.preview_type:hover{
+		
+		background-color:#515151;
+		
 	}
 
 
 	.preview_type{
 		
-		background-color: #3B3B3B;
+		//background-color: #3B3B3B;
 		
 
 	}
