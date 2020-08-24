@@ -104,8 +104,11 @@ function search(words){
 
 		//alert(single);
 		things=single.split(",");
-		preview_main.innerHTML+='<div class="preview_box" onclick="find('+id+')"><img src="'+things[1]+'" class="preview_img"><p class="preview_title">'+things[0]+'</p><p class="preview_little">'+things[2]+'个直播源</p><svg t="1595514904008" class="preview_go" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2122" width="200" height="200"><path d="M730.802325 593.75489 804.269733 525.91913 273.742891 0.511968 219.730267 54.012624 694.580589 524.191238 220.562215 969.987376 274.382851 1023.36004 730.994313 593.946878Z" p-id="2123" fill="#bfbfbf"></path></svg></div>';
-
+		if (things[0].match("[置顶]")==null)
+			preview_main.innerHTML+='<div class="preview_box" onclick="find('+id+')"><img src="'+things[1]+'" class="preview_img"><p class="preview_title">'+things[0]+'</p><p class="preview_little">'+things[2]+'个直播源</p><svg t="1595514904008" class="preview_go" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2122" width="200" height="200"><path d="M730.802325 593.75489 804.269733 525.91913 273.742891 0.511968 219.730267 54.012624 694.580589 524.191238 220.562215 969.987376 274.382851 1023.36004 730.994313 593.946878Z" p-id="2123" fill="#bfbfbf"></path></svg></div>';
+		else
+			preview_main.innerHTML=('<div class="preview_box" onclick="find('+id+')"><img src="'+things[1]+'" class="preview_img"><p class="preview_title">'+things[0]+'</p><p class="preview_little">'+things[2]+'个直播源</p><svg t="1595514904008" class="preview_go" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2122" width="200" height="200"><path d="M730.802325 593.75489 804.269733 525.91913 273.742891 0.511968 219.730267 54.012624 694.580589 524.191238 220.562215 969.987376 274.382851 1023.36004 730.994313 593.946878Z" p-id="2123" fill="#bfbfbf"></path></svg></div>'+preview_main.innerHTML);
+			
 	}
 		if (singlecount==0){
 		search('more');
