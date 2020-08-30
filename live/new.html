@@ -130,9 +130,8 @@
 			<script src="/header.js"></script> 
 		</div>
 		<div id="preview">
-		<h1 style="text-align:center;">直播中心<small>Beta</small></h1>
-		<small>本站直播资源均来自互联网，本站仅对相关资源进行搜集整理。所有资源仅供学习交流使用。<br /><br /></small>
-			<input id="searchbox" placeholder="搜索……" onporpertychanger="" oninput="changetab('alltype');searched=0;search(searchbox.value);">
+			<h1 style="text-align:center;">直播中心<small></small></h1>
+			<input id="searchbox" placeholder="搜索……" onporpertychanger="" onkeydown="enterHandler();">
 				<!-- <svg t="1598069351220" class="icon searchsvg" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2107" width="20" height="20"><path d="M400.704 801.408A400.64 400.64 0 1 1 400.704 0a400.64 400.64 0 0 1 0 801.408z m0-89.024a311.68 311.68 0 1 0 0-623.36 311.68 311.68 0 0 0 0 623.36z m267.264-110.4l314.752 314.88-62.912 62.912-314.816-314.816 62.976-62.976z" p-id="2108" fill="#8a8a8a"></path></svg> -->
 			</input>
 			<div id="preview_types">
@@ -150,6 +149,8 @@
 				<img class="listtype" id="listtype1" src="more.png" onclick="openl();"></img>
 				<img class="listtype" id="listtype2" src="morelight.png" onclick="openl();"></img>
 		</div>
+			<div id="preview_top">
+			</div>
 			<div id="preview_main">
 				<!-- <div class="preview_box" onclick="find(1)"> -->
 					<!-- <img src="https://himg.bdimg.com/sys/portrait/item/6590737765657479737761696e6603.jpg" class="preview_img"> -->
@@ -164,8 +165,10 @@
 					<!-- <svg t="1595514904008" class="preview_go" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2122" width="200" height="200"><path d="M730.802325 593.75489 804.269733 525.91913 273.742891 0.511968 219.730267 54.012624 694.580589 524.191238 220.562215 969.987376 274.382851 1023.36004 730.994313 593.946878Z" p-id="2123" fill="#bfbfbf"></path></svg> -->
 				<!-- </div> -->
 				<center id="firstt"><svg t="1596207602029" class="icon"  viewBox="0 0 1075 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3838" width="30%" height="30%"><path d="M525.344 970.688C392.096 967.616 281.36 921.968 193.04 833.6 104.72 745.328 59.072 634.544 56 501.344c3.072-133.248 48.72-243.984 137.04-332.304C281.36 80.72 392.096 35.072 525.344 32c133.2 3.072 243.984 48.72 332.256 137.04 88.32 88.32 134.016 199.056 137.088 332.304-3.072 133.2-48.768 243.984-137.088 332.256-88.272 88.32-199.056 134.016-332.256 137.088z m0-469.344v-264a29.328 29.328 0 1 0-58.656 0v293.28c0 16.224 13.104 29.376 29.28 29.376h234.72a29.328 29.328 0 1 0 0-58.656H525.344z" fill="#bfbfbf" p-id="3839"></path></svg><p>正在初始化…</p></center>
+				
 			</div>
 			<div id="showmore" onclick="search('more')">加载更多</div>
+			<small class="legal-statement">本站直播资源均来自互联网，本站仅对相关资源进行搜集整理。<br />所有资源仅供学习交流使用。<br />如有侵犯您的权利，请与我们取得联系。<br /><br /><br /><br /></small>
 			<a href="#top"> <div id="backToTop"> </div> </a>
 			<div id="detail">
 				<div id="dheader_main" class="height">
