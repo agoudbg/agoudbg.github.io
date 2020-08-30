@@ -1,3 +1,13 @@
+img{
+	
+	background:url(loading.gif);
+	background-size:70% 70%;
+	background-repeat:no-repeat;
+	background-position:center center;
+	
+}
+
+
 #sharephoto{
 	position:fixed;
 	left:140%;
@@ -120,6 +130,7 @@
 
 .listtype{
 	
+	background:none;
 	position:absolute;
 	right:5px;
 	margin-top:-6px;

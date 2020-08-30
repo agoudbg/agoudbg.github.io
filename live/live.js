@@ -122,12 +122,13 @@ function search(words){
 
 function find(id) {
 	open0=1;
+	detail_img.src="zlz.png";
 	//var id,name,photo,scrnum,introduce;
 	details=getdetail(id);
 	things=details[1].split(",");
 	dheader_title.innerHTML=things[0];
 	detail_img.src=things[1];
-	// sharephoto.src=things[1];
+	sharephoto.src=things[1];
 	detail_title.innerHTML=things[0];
 	detail_int.innerHTML=things[3];
 	detail_tag.innerHTML="";
