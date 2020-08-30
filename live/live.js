@@ -127,6 +127,7 @@ function find(id) {
 	things=details[1].split(",");
 	dheader_title.innerHTML=things[0];
 	detail_img.src=things[1];
+	sharephoto.src=things[1];
 	detail_title.innerHTML=things[0];
 	detail_int.innerHTML=things[3];
 	detail_tag.innerHTML="";
