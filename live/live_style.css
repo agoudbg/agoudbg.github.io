@@ -18,8 +18,8 @@ img{
 #searchbox{
 	
 	width:96%;
-	margin-left: -4px;
-	margin-bottom:-3px;
+	margin-left: auto;
+	margin-bottom: auto;
 	background-color:#F3F3F3;
 	height: 25px;
 	font-size:17px;
@@ -334,7 +334,7 @@ img{
 	margin-right:10px;
 	top:40px;
 	height:100px;
-
+	display:inline-block;
 	
 }
 .tag{
@@ -351,12 +351,6 @@ img{
 	color:black;
 }
 
-
-.tags{
-	
-	display:inline-block;
-	
-}
 .right{
 	text-align:right;
 	margin-right:20px;
