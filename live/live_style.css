@@ -19,7 +19,7 @@ img{
 	
 	width:96%;
 	margin-left: auto;
-	margin-bottom: auto;
+	margin-right: auto;
 	background-color:#F3F3F3;
 	height: 25px;
 	font-size:17px;
@@ -184,6 +184,16 @@ img{
 	width:70%;
 }
 
+.preview_selected {
+	
+	display:inline !important;
+	position:positive !important;
+	margin-left:-24px !important;
+	margin-bottom:0px !important;
+}
+
+
+
 .preview_title{
 	
 	font-size:24px;
@@ -318,7 +328,28 @@ img{
 	margin-bottom:12px;
 	
 }
+#detail_selected{
+	
+	display:inline-block;
+	background-color:#E1E1E1;
+	width:90%;
+	margin:-5px -0px 10px 0px;
+	padding:10px 30px 10px 20px;
 
+}
+#selected_inner{
+	
+	display:inline;
+	margin-left:12px;
+	
+}
+#selected-svg{
+	
+	display:inline;
+	/* margin-left:5px; */
+	margin-bottom:-3.4px;
+	
+}
 .introduce{
 	
 	margin: 0 16px 10px 16px;
@@ -662,6 +693,11 @@ iframe{
 	#dheader_main{
 		background-color:#3B3B3B;
 		
+	}
+	
+	#detail_selected{
+		
+		background-color:#3B3B3B;
 	}
 	#listtype1{
 		display:inline;

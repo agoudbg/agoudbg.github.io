@@ -1,0 +1,55 @@
+.lists{
+
+	padding-top: 2px;
+	padding-right: 11%;
+	padding-bottom: 2px;
+	padding-left: 11%;
+	display: flex;
+}
+
+.live-button{
+	
+	display: inline-block;
+	width: 30%;
+	height: 160px;
+	margin: 7px;
+	padding: 30px 15px;
+	background-size: 100% auto;
+	text-align: center;
+	align-items: center;
+	justify-content:space-between;
+	color: black;
+	background-size:cover;
+	-webkit-background-size:cover;
+	-o-background-size:cover;
+}
+
+#lite{
+	
+	background:url(demo/lite.png) no-repeat center 100%;
+	
+}
+
+#center{
+	
+	background:url(demo/center.png) no-repeat center 100%;
+	
+}
+
+#tvdesk{
+	
+	background:url(demo/tvdesk.png) no-repeat center 100%;
+	
+}
+
+
+@media (prefers-color-scheme: dark) {
+	
+	
+	.live-button{
+	
+		filter: invert(91%);
+	
+	}
+	
+}
