@@ -8,16 +8,16 @@ body {
 	font-family:PingFangSC-Regular;	
 }
 
-a:not(.weui-dialog__btn):not(.header-link):not(.footer-a):link{
+a:not(.weui-dialog__btn):not(.header-link):not(.footer-a):not(.card-seemore):link{
 	text-decoration:none;
 	color:blue;
 }
-a:not(.weui-dialog__btn):not(.header-link):not(.footer-a):hover
+a:not(.weui-dialog__btn):not(.header-link):not(.footer-a):not(.card-seemore):hover
 {
 	text-decoration:underline;
 	color:blue;
 }
-a:not(.weui-dialog__btn):not(.header-link):not(.footer-a):visited{
+a:not(.weui-dialog__btn):not(.header-link):not(.footer-a):not(.card-seemore):visited{
 	color:blue;
 	text-decoration:none;
 }

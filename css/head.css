@@ -6,8 +6,11 @@
 			margin-top:-15px;
 			margin-left:-8px;
 			margin-right:-8px;
-			background-color:#F7F7F7;
-			
+			/* background-color:#F7F7F7; */
+			-webkit-backdrop-filter: saturate(180%) blur(20px);
+			backdrop-filter: saturate(180%) blur(20px);
+			background-color: rgba(255,255,255,0.72);
+	
 		}
 
 		#header-title {
@@ -47,13 +50,20 @@
 			background-color:none;
 			text-decoration:none;
 			color:black;
+			-webkit-backdrop-filter: saturate(180%) blur(20px);
+			backdrop-filter: saturate(180%) blur(20px);
+			background-color: rgba(255,255,255,0.72);
+	
 		}
 
 		@media (prefers-color-scheme: dark) {
 			
 			#header-main{
-				background-color:#3B3B3B;
+				/* background-color:#3B3B3B; */
 				color:white;
+				background-color: rgba(52,50,50,0.7);
+				-webkit-backdrop-filter: blur(20px);
+				backdrop-filter: blur(20px);
 			}
 			.header-link:link{
 				text-decoration:none;
@@ -72,6 +82,8 @@
 				text-decoration:none;
 				background-color:white;
 				color:black;
+			lter: blur(20px);
+
 			}
 			.map-link div:hover{
 				text-decoration:none;
@@ -87,6 +99,9 @@
 				background-color:none;
 				text-decoration:none;
 				color:white;
+				background-color: rgba(52,50,50,0.7);
+				-webkit-backdrop-filter: blur(20px);
+				backdrop-fi
 			}
 			
 			.icon {
