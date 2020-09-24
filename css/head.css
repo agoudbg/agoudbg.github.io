@@ -47,12 +47,10 @@
 			color:black;
 		}
 		.map-link div{
-			background-color:none;
+			background-color:none!important;
 			text-decoration:none;
 			color:black;
-			-webkit-backdrop-filter: saturate(180%) blur(20px);
-			backdrop-filter: saturate(180%) blur(20px);
-			background-color: rgba(255,255,255,0.72);
+			backdrop-filter: none!important;
 	
 		}
 
@@ -96,12 +94,11 @@
 				color:white;
 			}
 			.map-link div{
-				background-color:none;
+		
+				background-color:none!important;
 				text-decoration:none;
 				color:white;
-				background-color: rgba(52,50,50,0.7);
-				-webkit-backdrop-filter: blur(20px);
-				backdrop-fi
+				backdrop-filter: none!important;
 			}
 			
 			.icon {
