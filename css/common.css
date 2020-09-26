@@ -48,14 +48,14 @@ a:not(.weui-dialog__btn):not(.header-link):not(.footer-a):not(.card-seemore):vis
 	}
 	a:not(.weui-dialog__btn):not(.header-link):not(.footer-a):link{
 		text-decoration:none;
-		color:#00B0F0;
+		color:#00B0F0!important;
 	}
 	a:not(.weui-dialog__btn):not(.header-link):not(.footer-a):hover{
 		text-decoration:underline;
-		color:#00B0F0;
+		color:#00B0F0!important;
 	}
 	a:not(.weui-dialog__btn):not(.header-link):not(.footer-a):visited{
-		color:#00B0F0;
+		color:#00B0F0!important;
 		text-decoration:none;
 	}
 	.force{
