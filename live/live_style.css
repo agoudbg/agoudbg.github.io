@@ -412,7 +412,7 @@ img{
 	white-space:nowrap;
 	text-overflow: ellipsis;
 	float:left;
-	width:11%;
+	width:calc(38% - 77px);
 	height:22px;
 }
 .url{
