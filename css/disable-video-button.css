@@ -1,0 +1,17 @@
+/*video默认全屏按钮*/
+video::-webkit-media-controls-fullscreen-button{ display: none !important; }
+
+/*video默认aduio音量按钮*/
+video::-webkit-media-controls-mute-button { display: none !important;}
+
+/*video默认setting按钮*/
+video::-internal-media-controls-overflow-button{ display: none !important;}
+
+/*腾讯云点播禁用firefox全屏、设置按钮*/
+.trump-button[sub-component="fullscreen_btn"],.trump-button[now="fullscreen"]{ display:none!important;}
+.trump-button[sub-component="setting"]{ display:none !important;}
+
+/*禁用video的controls（要慎重！不要轻易隐藏掉，会导致点击视频不能播放）*/
+video::-webkit-media-controls {
+display:none !important;
+
