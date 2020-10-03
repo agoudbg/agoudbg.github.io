@@ -11,7 +11,6 @@
 		<link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png" />
 		<link rel="stylesheet" type="text/css" href="/css/common.css">
 		<link rel="stylesheet" type="text/css" href="/css/disable-video-button.css">
-		<link href="/css/DPlayer.min.css"type="text/css" rel="stylesheet" >
 		<style media="screen and (min-width:5px) and (max-width:630px)">
 		.block{
 		width:80%;
@@ -71,43 +70,10 @@
 	</head>
 
 	<body>
-		<script src="/js/DPlayer.min.js"></script>
-		<video id="specialvideo" controls="none" preload="auto"  controls controlsList='nofullscreen nodownload noremote footbar' width="100%"><source src="" type="video/webm"></video>
-		<div id="dplayer"></div>
-		<script>specialvideo.play();</script>
 	
-		<script>
-		
-	s="https://1drv.ws/u/s!AnESC7KBGcb1r3mfZPw2uYEjPLoY?e=oKx5Cj"
-var dp = new DPlayer({
-container: document.getElementById('dplayer'),
-theme: '#FFFFFF',
-live: true,
-hotkey: false,
-autoplay: true,
-airplay: true,
-screenshot: false,
-danmaku: false,
-mutex: false,
-logo: "",
-volume: 0,
-// 视频右键菜单
-	contextmenu: [
-		{
-		},
-		
-	],
-
-video: {
-	quality: [
-		{name: '测试',url: s,type:'webm',},
-
-			],
-		pic: '',
-		defaultQuality: 0,
-}})	
-		
-		</script>
+		<video id="specialvideo" controls="none" preload="auto" style="margin:-20px -6px 6px -6px;width:calc(100% + 12px);" controls controlsList='nofullscreen nodownload noremote footbar' ><source src="https://1drv.ws/u/s!AnESC7KBGcb1r3mfZPw2uYEjPLoY?e=oKx5Cj" type="video/webm"></video>
+	
+		<script>specialvideo.play();</script>
 	
 		<marquee>热烈庆祝新闻频道正式启用n07，全面16：9一周年！
 		</marquee>
