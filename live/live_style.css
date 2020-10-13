@@ -9,6 +9,7 @@ img{
 
 
 #sharephoto{
+	
 	position:fixed;
 	left:140%;
 	
@@ -17,11 +18,9 @@ img{
 
 #searchbox{
 	
-	width:96%;
-	margin-left: auto;
-	margin-right: auto;
+	width:calc(100% - 20px);
 	background-color:#F3F3F3;
-	height: 25px;
+	height:25px;
 	font-size:17px;
 	padding:5px 10px;
 	border-width:2px;
@@ -33,35 +32,35 @@ img{
 
 .searchsvg{
 	
-	//color:#3776F4;
+	/* color:#3776F4; */
 	font-size:19px;
 	padding-top:-0px;
 	margin-top:4px;
 	right:20px;
-	//padding-right:auto;
-	//left:50%;
-	//font-weight:bold;
+	/* padding-right:auto; */
+	/* left:50%; */
+	/* font-weight:bold; */
 	position:absolute;
-	cursor: pointer;
+	cursor:pointer;
 	float:right;
 }
 #preview_types{
 	
-	overflow: auto;
-	width: 100%;
+	overflow:auto;
+	width:100%;
 	height:48px;
 	white-space:nowrap;
 	margin-bottom:8px;
 	margin-top:10px;
 	padding-top:6px;
-	//padding-right:-300px;
-	background-color: #F7F7F7;
+	/* padding-right:-300px; */
+	background-color:#F7F7F7;
 	color:black;
 	
-	transition: height 0.25s;
-	-moz-transition: height 0.25s;	/* Firefox 4 */
-	-webkit-transition: height 0.25s;	/* Safari 和 Chrome */
-	-o-transition: height 0.25s;	/* Opera */
+	transition:height 0.25s;
+	-moz-transition:height 0.25s;	/* Firefox 4 */
+	-webkit-transition:height 0.25s;	/* Safari 和 Chrome */
+	-o-transition:height 0.25s;	/* Opera */
 
 
 }
@@ -78,7 +77,7 @@ img{
 
 #preview_types::-webkit-scrollbar {
 
-	display: none;
+	display:none;
 
 }
 #detail::-webkit-scrollbar {
@@ -88,26 +87,26 @@ img{
 }
 .url::-webkit-scrollbar {
 
-    display: none;
+    display:none;
 }
 .linklist::-webkit-scrollbar {
 
-    display: none;
+    display:none;
 }
 ::-webkit-scrollbar {
-    width: 20px;
-    height: 8px;
+    width:20px;
+    height:8px;
 	
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 12px;
-    border: 6px solid rgba(0, 0, 0, 0);
-    box-shadow: 8px 0 0 #A5ADB7 inset;
+    border-radius:12px;
+    border:6px solid rgba(0, 0, 0, 0);
+    box-shadow:8px 0 0 #A5ADB7 inset;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    box-shadow: 8px 0 0 #4A4A4A inset;
+    box-shadow:8px 0 0 #4A4A4A inset;
 }
 
 #firstt{
@@ -118,11 +117,11 @@ img{
 
 .preview_type{
 	
-	background-color: transparent;
-	padding: 10px 10px 10px 10px;
+	background-color:transparent;
+	padding:10px 10px 10px 10px;
 	margin-top:0px;
 	margin-bottom:2px;
-	cursor: pointer;
+	cursor:pointer;
 	border-radius:6px;
 	display:inline-block;
 
@@ -132,7 +131,7 @@ img{
 	
 	background:none;
 	position:absolute;
-	right:5px;
+	right:8px;
 	margin-top:-6px;
 	z-index:30;
 	width:70px;
@@ -150,11 +149,11 @@ img{
 
 .preview_box{
 	
-	//display:inline;
+	/* display:inline; */
 	height:80px;
 	border-bottom:solid #E4E4E4 1px;
 	padding-top:13px;
-	cursor: pointer;
+	cursor:pointer;
 	
 	
 }
@@ -178,9 +177,9 @@ img{
 .preview_box p{
 	
 	display:inline;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
 	width:70%;
 }
 
@@ -201,9 +200,9 @@ img{
 	margin-top:7px;
 	margin-left:10px;
 	position:absolute;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
 }
 
 .preview_little{
@@ -231,7 +230,7 @@ img{
 	padding:5px 10px;
 	text-align:center;
 	background-color:#E8E8E8;
-	//position:relative;
+	position:relative;
 }
 
 .legal-statement{
@@ -246,10 +245,10 @@ img{
 	position:absolute;
 	background-color:#FFFFFF;
 	
-	transition: left 0.25s;
-	-moz-transition: left 0.25s;	/* Firefox 4 */
-	-webkit-transition: left 0.25s;	/* Safari 和 Chrome */
-	-o-transition: left 0.25s;	/* Opera */
+	transition:left 0.25s;
+	-moz-transition:left 0.25s;	/* Firefox 4 */
+	-webkit-transition:left 0.25s;	/* Safari 和 Chrome */
+	-o-transition:left 0.25s;	/* Opera */
 
 	
 	
@@ -265,17 +264,21 @@ img{
 }
 #dheader_title{
 	
-	//color:#3776F4;
+	/* color:#3776F4; */
 	font-size:19px;
 	padding-top:-0px;
 	margin-top:12px;
-	//left:0;
-	//right:0;
-	//margin-left:-25%;
+	/* left:0; */
+	/* right:0; */
+	/* margin-left:-25%; */
 	font-weight:bold;
-	//position:fixed;
+	/* position:fixed; */
 	text-align:center; 
-
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
+    padding: 0px 80px;
 
 }
 
@@ -290,7 +293,7 @@ img{
 	//left:50%;
 	//font-weight:bold;
 	position:fixed;
-	cursor: pointer;
+	cursor:pointer;
 }
 
 #dheader_backsvg{
@@ -304,7 +307,7 @@ img{
 	//left:50%;
 	//font-weight:bold;
 	position:fixed;
-	cursor: pointer;
+	cursor:pointer;
 }
 #dheader_sharesvg{
 	
@@ -317,7 +320,7 @@ img{
 	//left:50%;
 	//font-weight:bold;
 	position:fixed;
-	cursor: pointer;
+	cursor:pointer;
 }
 .height2{
 	
@@ -352,7 +355,7 @@ img{
 }
 .introduce{
 	
-	margin: 0 16px 10px 16px;
+	margin:0 16px 10px 16px;
 	//font-size:16px;
 	position:relative;
 	top:2px;
@@ -408,11 +411,11 @@ img{
 	display:inline;
 	margin-right:0px;
 	font-size:16px;
-	overflow: hidden;
+	overflow:hidden;
 	white-space:nowrap;
-	text-overflow: ellipsis;
+	text-overflow:ellipsis;
 	float:left;
-	width:calc(38% - 77px);
+	width:calc(48% - 101px);
 	height:22px;
 }
 .url{
@@ -423,12 +426,12 @@ img{
 	padding:2px 5px 2px 5px;
 	display:inline;
 	color:black;
-	overflow: auto;
-	width: 62%;
+	overflow:auto;
+	width:52%;
 	white-space:nowrap;
 	left:1px;
 	margin:2px;
-	margin-right:10px;
+	margin-right:13px;
 	//font-family:;
 	//font-weight:bold;
 	
@@ -443,13 +446,14 @@ img{
 	//padding:4px 5px;
 	display:inline;
 	color:black;	
-	width: 24px;
-	height: 24px;
+	width:24px;
+	height:24px;
 	margin-right:13px;
+	margin-left:-7px;
 	margin-top:2px;
 	padding:0;
 	float:right;
-	cursor: pointer;
+	cursor:pointer;
 	//display:none;
 }
 .playicon{
@@ -459,20 +463,20 @@ img{
 }
 
 .player {
-	position: fixed;
+	position:fixed;
 	
 	top:60%;
-	width: 300px;
+	width:300px;
 	z-index:9999;
 	display:none;
 	padding:0;
 	margin:0;
-	/* box-shadow: 0px 0px 5px black; */
+	/* box-shadow:0px 0px 5px black; */
 	border-radius:6px;
-	transition: width 0.25s;
-	-moz-transition: width 0.25s;	/* Firefox 4 */
-	-webkit-transition: width 0.25s;	/* Safari 和 Chrome */
-	-o-transition: width 0.25s;	/* Opera */
+	transition:width 0.25s;
+	-moz-transition:width 0.25s;	/* Firefox 4 */
+	-webkit-transition:width 0.25s;	/* Safari 和 Chrome */
+	-o-transition:width 0.25s;	/* Opera */
 
 
 }
@@ -480,17 +484,17 @@ img{
 	padding-left:5px; 
 	padding-bottom:-5px;
 	margin:0;
-	height: 30px;
-	line-height: 30px;
-    color: black;
-    background-color: #E1E1E1;
-    cursor: move;
-	border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+	height:30px;
+	line-height:30px;
+    color:black;
+    background-color:#E1E1E1;
+    cursor:move;
+	border-top-left-radius:6px;
+    border-top-right-radius:6px;
 	//display:none;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	box-shadow: 0px 0px 5px black;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	box-shadow:0px 0px 5px black;
 
 
 }
@@ -498,40 +502,40 @@ img{
 .closeplayer{
 	float:right;
 	padding:6px;
-	cursor: pointer;
+	cursor:pointer;
 }
 
 .playin{
 	padding:0;
 	margin:0;
 	height:168px;
-	box-shadow: 0px 0px 5px black;
+	box-shadow:0px 0px 5px black;
 	
-	border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;	
+	border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;	
 	
-	transition: width 0.25s;
-	-moz-transition: width 0.25s;	/* Firefox 4 */
-	-webkit-transition: width 0.25s;	/* Safari 和 Chrome */
-	-o-transition: width 0.25s;	/* Opera */
+	transition:width 0.25s;
+	-moz-transition:width 0.25s;	/* Firefox 4 */
+	-webkit-transition:width 0.25s;	/* Safari 和 Chrome */
+	-o-transition:width 0.25s;	/* Opera */
 
-	transition: height 0.25s;
-	-moz-transition: height 0.25s;	/* Firefox 4 */
-	-webkit-transition: height 0.25s;	/* Safari 和 Chrome */
-	-o-transition: height 0.25s;	/* Opera */
+	transition:height 0.25s;
+	-moz-transition:height 0.25s;	/* Firefox 4 */
+	-webkit-transition:height 0.25s;	/* Safari 和 Chrome */
+	-o-transition:height 0.25s;	/* Opera */
 
 }
 
 iframe{
 	
-	border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
+	border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
 }
 
 
 .nomore{
 	
-	color: grey;
+	color:grey;
 	text-align:center;
 	font-size:12px;
 	left:0px;
@@ -571,25 +575,25 @@ iframe{
 
 	width:100%;
 	height:100px;
-	overflow: auto;
+	overflow:auto;
 
 	
 }
 
 #js_dialog_1{
 	bottom:-300px;
-	transition: bottom 0.5s;
-	-moz-transition: bottom 0.5s;	/* Firefox 4 */
-	-webkit-transition: bottom 0.5s;	/* Safari 和 Chrome */
-	-o-transition: bottom 0.5s;	/* Opera */
+	transition:bottom 0.5s;
+	-moz-transition:bottom 0.5s;	/* Firefox 4 */
+	-webkit-transition:bottom 0.5s;	/* Safari 和 Chrome */
+	-o-transition:bottom 0.5s;	/* Opera */
 
 }
 .weui-mask{
 	display:none;
-	transition: opacity 0.5s;
-	-moz-transition: opacity 0.5s;	/* Firefox 4 */
-	-webkit-transition: opacity 0.5s;	/* Safari 和 Chrome */
-	-o-transition: opacity 0.5s;	/* Opera */
+	transition:opacity 0.5s;
+	-moz-transition:opacity 0.5s;	/* Firefox 4 */
+	-webkit-transition:opacity 0.5s;	/* Safari 和 Chrome */
+	-o-transition:opacity 0.5s;	/* Opera */
 
 }
 .share{
@@ -598,7 +602,7 @@ iframe{
 	display:inline-block;
 	width:90px;
 	margin:3px 4px;
-	cursor: pointer;
+	cursor:pointer;
 	border-radius:6px;
 	
 	
@@ -625,7 +629,7 @@ iframe{
 	
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme:dark) {
 	
 	#preview{
 		
@@ -653,7 +657,7 @@ iframe{
 
 	.preview_type{
 		
-		//background-color: #3B3B3B;
+		//background-color:#3B3B3B;
 		
 
 	}
@@ -686,7 +690,7 @@ iframe{
 
 
 	#detail {
-		background-color: #262626;
+		background-color:#262626;
 	}
 	
 		

@@ -70,7 +70,7 @@ if (window.location.href.charAt('4')=='s') {
 				//overflow-x: hidden;
 			}
 			.listtype{
-				right:63%;	
+				right:calc(65% - 20px);	
 }
 			.livehead{
 				
@@ -128,6 +128,8 @@ if (window.location.href.charAt('4')=='s') {
 			}
 
 		</style>
+		
+		<script src="//cdn.junbo.wang/ads.js"></script>
 	</head>
 
 	<body>
@@ -155,9 +157,9 @@ if (window.location.href.charAt('4')=='s') {
 				<p class="preview_type" id="新闻" onclick="changetab('新闻')">新闻</p>
 				<p class="preview_type" id="中国教育电视台" onclick="changetab('中国教育电视台')">CETV</p>
 				<p class="preview_type" id="海外" onclick="changetab('海外')">海外</p>
-				<!-- <p class="preview_type" ></p><p class="preview_type" ></p><p class="preview_type" ></p><p class="preview_type" ></p> -->
-				<!-- <img class="listtype" id="listtype1" src="more.png" onclick="openl();"></img> -->
-				<!-- <img class="listtype" id="listtype2" src="morelight.png" onclick="openl();"></img> -->
+				<p class="preview_type" ></p><p class="preview_type" ></p><p class="preview_type" ></p><p class="preview_type" ></p>
+				<img class="listtype" id="listtype1" src="more.png" onclick="openl();"></img>
+				<img class="listtype" id="listtype2" src="morelight.png" onclick="openl();"></img>
 			</div>
 		
 			<div id="preview_top">
@@ -182,6 +184,10 @@ if (window.location.href.charAt('4')=='s') {
 			</div>
 			<div id="showmore" onclick="search('more')">加载更多</div>
 			<small class="legal-statement">本站直播资源均来自互联网，本站仅对相关资源进行搜集整理。<br />所有资源仅供学习交流使用。<br />如有侵犯您的权利，请与我们取得联系。<br /><br /><br /><br /></small>
+			
+		<script>
+			showad(0,"100%","150px","margin-bottom:20px;");
+		</script>
 			<a href="#top"> <div id="backToTop"> </div> </a>
 			<div id="detail">
 				<div id="dheader_main" class="height">
@@ -210,12 +216,19 @@ if (window.location.href.charAt('4')=='s') {
 					
 					<a id="detail_baike" href="" target="_blank"><p class="introduce right">百度搜索该频道&gt;</p></a>
 					<a id="detail_litetv" href="" target="_blank"><p class="introduce right">在轻电视中观看&gt;</p></a>
+					
+					<!-- <script> -->
+						<!-- showad(0,"100%","70px",""); -->
+						<!-- </script> -->
 					<p class="introduce dh2">直播源<small id="countnum"></small></p>
 					<div id="linksin">
 					
 					</div>
+					<script>
+						showad(0,"100%","90px","");
+					</script>
 					<p class="introduce dh2" id="pinglun">评论<small>（暂不支持分频道评论）<br /><small>*对Gitalk的安全性尚存在争议。<br /></small></small></p>
-
+					
 					<div id="gitalk-container"></div>
 			
 
@@ -271,6 +284,7 @@ if (window.location.href.charAt('4')=='s') {
 
 	</body>
 			<script src="gitalk.min.js"></script>
+
 			<script src="live.js"></script>
 			<!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  -->
 
