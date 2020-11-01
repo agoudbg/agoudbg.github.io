@@ -335,7 +335,7 @@ img{
 	
 	display:inline-block;
 	background-color:#E1E1E1;
-	width:90%;
+	width:calc(100% - 20px);
 	margin:-5px -0px 10px 0px;
 	padding:10px 30px 10px 20px;
 
@@ -431,10 +431,8 @@ img{
 	left:1px;
 	margin:2px;
 	margin-right:13px;
-	//font-family:;
-	//font-weight:bold;
+	float:left;
 	
-	float:right;
 }
 .play{
 	
