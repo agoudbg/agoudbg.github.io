@@ -131,9 +131,9 @@ function search(words){
 		//alert(single);
 		things=single.split(",");
 		
-		if (things[2]!=""){
+		if (things[3]!=""){
 			selected='<svg t="1600529705535" class="preview_selected" id="selected-svg" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9176" width="20" height="20"><path d="M391.936 684.288L233.536 525.888a32 32 0 0 0-45.248 45.248l180.992 180.992a31.872 31.872 0 0 0 45.248 0l407.296-407.296a32 32 0 0 0-45.248-45.248l-384.64 384.64zM512 1024A512 512 0 1 1 512 0a512 512 0 0 1 0 1024z" fill="#3776F4" p-id="8940"></path></svg>';
-			selint=" | "+things[2];
+			selint=" | "+things[3];
 		}
 		else {
 			selected="";
@@ -159,7 +159,9 @@ function search(words){
 
 function find(id) {
 	open0=1;
+	detail.scrollTop=0;
 	detail_img.src="zlz.png";
+	titu.style.background="url(zlz.png)center 0 no-repeat";
 	//var id,name,photo,scrnum,introduce;
 	details=getdetail(id);
 	things=details[1].split(",");
@@ -167,11 +169,11 @@ function find(id) {
 	detail_img.src=things[1];
 	sharephoto.src=things[1];
 	detail_title.innerHTML=things[0];
-	detail_int.innerHTML=things[4];
+	detail_int.innerHTML=things[5];
 	detail_tag.innerHTML="";
-	for(i=1;i<=things[5];i++){
+	for(i=1;i<=things[6];i++){
 		
-		tag=things[i+5];
+		tag=things[i+6];
 		tagplus='<p class="tag" onclick="closewin();document.documentElement.scrollTop = 0;changetab(&quot;'+tag+'&quot;);">'+tag+'</p>';
 		detail_tag.innerHTML+=tagplus;
 	}
@@ -180,14 +182,30 @@ function find(id) {
 	detail_baike.href='https://www.baidu.com/s?wd='+things[0];
 	if (things[2]!=""){
 		
-		selected_inner.innerHTML="<b>229资料站直播中心精选：</b>"+things[2];
+		titu.style.background="url("+things[2]+")center center no-repeat";
+		dheader_main.className="height showimgbg";
+		dheader_title.className="showimgp";
+		titu.style.display="block";
+	}
+	else{
+		
+			dheader_main.className="height";
+			dheader_title.className="";
+			titu.style.display="none";
+
+
+	}
+	
+	if (things[3]!=""){
+		
+		selected_inner.innerHTML="<b>229资料站直播中心精选：</b>"+things[3];
 		detail_selected.style.display="inline-block";
 	}
 	else detail_selected.style.display="none";
 	
-	if (things[3]!=""){
+	if (things[4]!=""){
 		
-		detail_litetv.href="/live/lite?tid="+things[3];
+		detail_litetv.href="/live/lite?tid="+things[4];
 		detail_litetv.style.display="block";
 				
 	}
@@ -198,8 +216,8 @@ function find(id) {
 	else linksin.innerHTML="";
 	for(i=1,n=0;n<snum;i++){
 		
-		linkname=things[2*i+9];
-		linkurl=things[2*i+10];
+		linkname=things[2*i+10];
+		linkurl=things[2*i+11];
 		if (linkurl=="")continue;
 		else n++;
 		playbroke="";
@@ -453,7 +471,7 @@ function getsourcenum(id){
 	things=details[1].split(",");
 
 	for(i=0,co=0;;i++){
-		linkurl=things[2*i+10];
+		linkurl=things[2*i+11];
 		if (linkurl=="") continue;
 		else if (linkurl==undefined) return co;
 		else co++;
@@ -545,3 +563,25 @@ function device(){
         return 2;//winphone手机
     }
 }
+
+
+document.getElementById("detail").onscroll=function(){
+	
+	detx=detail.scrollTop;
+	if (things[2]!="" && detx<260){
+		
+			dheader_main.className="height showimgbg";
+			dheader_title.className="showimgp";
+
+		
+	}
+	else{
+		
+			dheader_main.className="height";
+			dheader_title.className="";
+
+
+	}
+	
+
+};
