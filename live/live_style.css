@@ -328,7 +328,7 @@ img{
 .height3{
 	
     height: 338px;
-    margin-bottom: -103px;
+    margin-bottom: -73px;
 	margin-top: -60px;
     background-size: cover!important;
 	
@@ -336,7 +336,7 @@ img{
 
 #jianbian{
 	
-	background-image: linear-gradient(to bottom, rgba(0,0,0,0) 60%, var(--background));
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0) 40%, var(--background));
 	
 }
 #dheader_back{
