@@ -44,6 +44,13 @@
 			margin-top: -5px;
 			visibility:hidden;
 		}
+
+
+		.map-link:hover, .map-link:active{
+		
+			text-decoration: none!important;
+		}
+
 		@media (prefers-color-scheme: dark) {
 			#map-box {
 				background-color:#3B3B3B;
