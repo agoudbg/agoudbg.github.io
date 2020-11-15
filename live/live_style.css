@@ -351,6 +351,7 @@ img{
 	//font-weight:bold;
 	position:fixed;
 	cursor:pointer;
+	z-index: 2;
 }
 
 #dheader_backsvg{
@@ -365,6 +366,8 @@ img{
 	//font-weight:bold;
 	position:fixed;
 	cursor:pointer;
+	z-index: 2;
+
 }
 #dheader_sharesvg{
 	
@@ -378,6 +381,7 @@ img{
 	//font-weight:bold;
 	position:fixed;
 	cursor:pointer;
+	z-index: 2;
 }
 .height2{
 	
