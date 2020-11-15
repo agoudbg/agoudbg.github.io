@@ -1,0 +1,152 @@
+:root{
+	
+	--uwp-border: #949494;
+	--uwp-border-active: #0078D7;
+	--uwp-bg: #FFFFFF;
+	--uwp-bg-focus: #FFFFFF;
+	--uwp-button: #CCCCCC;
+	--uwp-button-active: #999999;
+	--uwp-hover: #666666;
+	--uwp-focus: #0078D7;
+	--uwp-text: black;
+	--uwp-text-focus: black;
+	--uwp-link: #0078D7;
+	--uwp-link-hover: #747474;
+	--uwp-link-active: #ADADAD;
+	
+}
+
+@media (prefers-color-scheme: dark){
+	
+	:root{
+	
+		--uwp-border: #858585;
+		--uwp-border-active: #0078D7;
+		--uwp-bg: #000000;
+		--uwp-bg-focus: #FFFFFF;
+		--uwp-button: #333333;
+		--uwp-button-active: #666666;
+		--uwp-hover: #A4A4A4;
+		--uwp-focus: #0078D7;
+		--uwp-text: white;
+		--uwp-text-focus: black;
+		--uwp-link: #0068BB;
+		--uwp-link-hover: #999999;
+		--uwp-link-active: #666666;
+
+	}
+	
+}
+.appname{
+
+text-align: center;
+
+}
+
+.textin{
+	
+	border: 3px var(--uwp-border) solid;
+	border-radius: 0;
+	height: 25px;
+	width: 105px;
+	margin: 5px 10px 5px 0;
+    padding: 2px 7px;
+	outline: none;
+	font-size: 16px;
+	background-color: var(--uwp-bg);
+	color: var(--uwp-text);
+	
+}
+
+.textin:hover{
+	
+	border: 3px var(--uwp-hover) solid;
+	border-radius: 0;
+	background-color: var(--uwp-bg);
+	
+}
+
+.textin:focus{
+	
+	border: 3px var(--uwp-border-active) solid;
+	border-radius: 0;
+	background-color: var(--uwp-bg-focus);
+	color: var(--uwp-text-focus);
+	
+}
+
+.button{
+
+	border: 3px var(--uwp-button) solid;
+	border-radius: 0;
+    width: 100px;
+    text-align: center;
+    height: 35px;
+    margin: 5px 0px;
+    padding: 2px 7px;
+	outline: none;
+	font-size: 16px;
+	background-color: var(--uwp-button);
+	color: var(--uwp-text);
+	display: inline;
+}
+
+.button:hover{
+
+	border: 3px var(--uwp-hover) solid;
+	
+}
+
+.button:active{
+
+	transform: scale(0.97);
+    -ms-transform: rotate(0.97);
+    -moz-transform: rotate(0.97);
+    -webkit-transform: rotate(0.97);
+    -o-transform: rotate(0.97);
+	background-color: var(--uwp-button-active);
+	border: 3px var(--uwp-button-active) solid;
+
+}
+
+.uwpa{
+	
+	color: var(--uwp-link)!important;
+	
+}
+
+.uwpa:hover{
+	
+	color: var(--uwp-link-hover)!important;
+	text-decoration: none!important;
+
+}
+
+.uwpa:active{
+	
+	color: var(--uwp-link-active)!important;
+	text-decoration: none!important;
+	
+}
+
+.appsinner{
+	
+	margin: 0;
+	padding: 0;
+	
+}
+@media(min-width:700px){
+	
+	.appsinner{
+	
+	margin: 0px 10%;
+	
+	}
+	
+	.appname{
+	
+	text-align: left;
+	
+	}
+	
+}
