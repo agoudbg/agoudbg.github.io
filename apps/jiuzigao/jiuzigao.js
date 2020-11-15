@@ -1,6 +1,11 @@
 function printg(){
 	
-	// alert(111);
+	ptitle.innerHTML=title.value;
+	peditor.innerHTML=editor.value;
+	preporter.innerHTML=reporter.value;
+	plength.innerHTML=length.value;
+	pprinter.innerHTML=printer.value;
+	printp.innerHTML=main.value;
 	window.print();
 	
 	

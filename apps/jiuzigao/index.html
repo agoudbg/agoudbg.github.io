@@ -21,16 +21,16 @@
 		<div id="hcont"></div>
 		<!-- 下面是正文 -->
 		<div class="appsinner">
-			<h1 class="appname">九字稿生成器</h1>
+			<h1 class="appname">九字稿生成器<small> Preview</small></h1>
 
 			<table style="width:100%;" cellpadding="2" cellspacing="0" border="0">
 				<tbody>
 					<tr>
 						<td style="width:33%">
-							<label for="writer">编稿人 <input id=" writer" class="inputtable textin"></input></label>
+							<label for="editor">编稿人 <input id="editor" class="inputtable textin"></input></label>
 						</td>
 						<td style="width:33%">
-								<label for=" interviewer">记者　 <input id="interviewer" class="inputtable textin"></input></label>
+								<label for="reporter">记者　 <input id="reporter" class="inputtable textin"></input></label>
 						</td>
 						<td style="width:33%">
 							<label for="length">导语长 <input id="length" class="inputtable textin"></input></label>
@@ -38,7 +38,7 @@
 					</tr>
 					<tr>
 						<td>
-							<label for="printer">打印人 <input id=" printer" class="inputtable textin"></input></label>
+							<label for="printer">打印人 <input id="printer" class="inputtable textin"></input></label>
 						</td>
 						<td>
 							<br />
@@ -49,54 +49,48 @@
 					</tr>
 				</tbody>
 			</table>
-			<span style="float: right"><button class="button" style="margin-right: 10px">清空</button><button class="button" onclick="printg();">打印</button></span>
+			<span style="float: right"><button class="button" onclick="clear();" style="margin-right: 10px">清空</button><button class="button" onclick="printg();">打印</button></span>
 			<input id="title" class="inputtable textin" placeholder="标题" style="    width: calc(100% - 20px);"></input>
-			<textarea id="maim" class="inputtable textin" placeholder="开始编辑内容…" style="width: calc(100% - 20px);height: 300px" cols="20" rows="9"></textarea>
+			<textarea id="main" class="inputtable textin" placeholder="开始编辑内容…" style="width: calc(100% - 20px);height: 300px" cols="20" rows="9"></textarea>
 			<p>为了更好的打印效果，建议您下载并安装<a class="uwpa" href='https://cdn.junbo.wang/fonts/simsun.ttf'>宋体</a>和<a class="uwpa" href='https://cdn.junbo.wang/fonts/simhei.ttf'>黑体</a>字体包。 </p>
+			<p><b>已知问题：</b></p>
+			<p>·Preview 版本暂不能在每一页显示页眉和页脚，而只能在最初和最末显示。我们正在排查这个问题。 (#01)</p>
+			<p>·Preview 版本暂未内置所需字体。 (#02)</p>
+			<p>·标题无法加粗。 (#03)</p>
 		</div>
 		
 		<div id="printout">
 			<table style="width:100%;" cellpadding="0" cellspacing="0" bordercolor="#000000" border="0">
 				<tbody>
 					<tr>
-						<td colspan="3"style="font-size:24px;font-weight:bold;text-align:center">
-							<span >新闻文稿导语（9字）标题全</span><br />
+						<td colspan="3"style="font-size:22px;font-weight:bold;text-align:center">
+							<span style="font-weight:bolden;" id="dtitle">新闻文稿导语（9字）标题全</span><br />
 						</td>
 					</tr>
 					<tr>
 						<td colspan="3">
 							<p>
-								【标&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;题】
+								【标&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;题】<span id="ptitle"></span>
 							</p>
 						</td>
 					</tr>
 					<tr>
-						<td>
-							<span>【编&ensp;&ensp;辑&ensp;&ensp;人】</span><br />
+						<td width="33%">
+							<span>【编&ensp;&ensp;辑&ensp;&ensp;人】</span><span id="peditor"></span>
 						</td>
-						<td >
-							<span>【记&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;者</span><span>】</span><br />
+						<td width="33%">
+							<span>【记&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;者</span><span>】</span><span id="preporter"></span>
 						</td>
-						<td >
-							<span>【导&ensp;&ensp;语&ensp;&ensp;长】</span><br />
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<br />
-						</td>
-						<td>
-						</td>
-						<td>
-						</td>
-						<td>
-						</td>
-						<td>
+						<td width="33%">
+							<span>【导&ensp;&ensp;语&ensp;&ensp;长】</span><span id="plength"></span>
 						</td>
 					</tr>
+					
 				</tbody>
 			</table>
-	
+	<div class="aline"></div>
+
+
 			<p class="printp">
 [ 口播 ] 科学防控疫情 ， 有序复工复产 。 这是当前两手都要抓好的硬任务 。 为防控疫情 ， 一刀切拒绝返程 ， 不行 ， 放 > 松了防控也不行 。 看似两难 ， 但换一个角度 ， V 其实也给我们一个机会 ， 在治理方式上去下更精细的绣花功夫 。 北京预计 2 月 18 日后随着通勤及返京客流增加 ， 北京交通枢纽客流量将逐渐恢复至日均约 60 万人次的常态化
 				参考消息网10月25日报道英国《金融时报》网站10月23日刊载题为《不要对中国在变化世界中的崛起视而不见》的文章，作者系美国桥水公司创始人雷·戴利奥，文章称，从控制新冠肺炎感染率、先进技术发展、投资影响等指标客观比较中国和美国，中国的基本面显然更有利。全文编译如下：
@@ -118,8 +112,36 @@
 正如笔者在一项正在进行的研究中所记录的，利用上述指标客观比较中国和美国，中国的基本面显然更有利。
 
 &ensp;&ensp;长】
-					</pre>
-
+			</p>
+		
+			<table style="width:100%;" cellpadding="0" cellspacing="0" bordercolor="#000000" border="0">
+				<tbody>
+					<tr>
+						
+					</tr>
+					<tr>
+						<td colspan="3">
+							
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>
+								第 <span id="pagenow">1</span> 页 共 <span id="pageall">1</span> 页
+							</p>
+						</td>
+						<td >
+							<p>
+								打印人:<span id="pprinter"></span>
+							</p>
+						</td>
+						<td >							
+							<p>
+								打印时间:<span id="pprinttime"></span>
+							</p>
+						</td>
+					</tr>
+			</table>
 
 		</div>
 		<!-- 上面是正文 -->

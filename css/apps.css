@@ -43,6 +43,12 @@ text-align: center;
 
 }
 
+input,textarea{
+	-webkit-appearance: none;
+	appearance: none;
+	
+}
+
 .textin{
 	
 	border: 3px var(--uwp-border) solid;
